@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <g id="header" transform="translate(60, 45)">
+    <rect x="0" y="0" width="140" height="26" rx="13" fill="#F4F6F9"/>
+    <text x="70" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#C59B27" text-anchor="middle">3심 : 재무 심문</text>
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="32" font-weight="800" fill="#0B2545">3심 결과 : 25점 / 30점 획득 (PEG 0.9 안전마진 우수)</text>
+    <text x="0" y="94" font-family="Pretendard, sans-serif" font-size="17" font-weight="500" fill="#5A6578">예상 PER 13배 ÷ 이익성장률 15% = PEG 0.86으로 피터 린치 적정가치 통과</text>
+  </g>
+
+  <g id="cards" transform="translate(60, 160)">
+    <g transform="translate(0, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#10B981" rx="3"/>
+      <rect x="25" y="25" width="80" height="28" rx="6" fill="#DCFCE7"/>
+      <text x="65" y="44" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#166534" text-anchor="middle">Q4. 10점</text>
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#0B2545">성공 공식 복제 : 통과</text>
+      <line x1="25" y1="105" x2="340" y2="105" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="140" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#134074">■ 실제 팩트:</text>
+      <text x="25" y="165" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">평택/화성 팹의 양산 노하우를 미국 테일러</text>
+      <text x="25" y="187" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">및 글로벌 공장으로 동일하게 복제 확장 중.</text>
+      <text x="25" y="212" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#10B981">➔ 글로벌 제조 복제력 입증 (10점 만점)</text>
+      <rect x="20" y="260" width="325" height="95" rx="8" fill="#FFFFFF"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#0B2545">💬 린치의 코멘트:</text>
+      <text x="35" y="310" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"한 번 입증된 생산 능력을 글로벌로 복제하는</text>
+      <text x="35" y="330" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">기업은 쉽게 흔들리지 않는다."</text>
+      <rect x="20" y="370" width="325" height="32" rx="6" fill="#10B981"/>
+      <text x="182" y="392" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">[V] 통과 (+10점)</text>
+    </g>
+
+    <g transform="translate(397, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#10B981" rx="3"/>
+      <rect x="25" y="25" width="80" height="28" rx="6" fill="#DCFCE7"/>
+      <text x="65" y="44" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#166534" text-anchor="middle">Q5. 10점</text>
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#0B2545">PEG 비율 검증 : 통과</text>
+      <line x1="25" y1="105" x2="340" y2="105" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="140" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#134074">■ 실제 팩트 (PEG = 0.86):</text>
+      <text x="25" y="165" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">• 12개월 선행 PER: 약 13.0배</text>
+      <text x="25" y="187" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">• 반도체 턴어라운드 연 이익성장률: 15%+</text>
+      <text x="25" y="212" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#10B981">➔ PEG 0.86 &lt;= 1.0 (안전마진 확보, 만점)</text>
+      <rect x="20" y="260" width="325" height="95" rx="8" fill="#FFFFFF"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#0B2545">💬 린치의 코멘트:</text>
+      <text x="35" y="310" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"성장률보다 낮은 PER에 거래되고 있다.</text>
+      <text x="35" y="330" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">가격적인 안전마진이 충분하다."</text>
+      <rect x="20" y="370" width="325" height="32" rx="6" fill="#10B981"/>
+      <text x="182" y="392" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">[V] 통과 (+10점)</text>
+    </g>
+
+    <g transform="translate(795, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#C59B27" rx="3"/>
+      <rect x="25" y="25" width="80" height="28" rx="6" fill="#FEF9C3"/>
+      <text x="65" y="44" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#854D0E" text-anchor="middle">Q6. 5점</text>
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#0B2545">기관/외인 지분 : 부분</text>
+      <line x1="25" y1="105" x2="340" y2="105" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="140" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#134074">■ 실제 팩트:</text>
+      <text x="25" y="165" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">외국인 지분율 약 54%, 국내 기관 다수 보유.</text>
+      <text x="25" y="187" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">기관이 꽉 차 있어 신규 수급 폭발력은 제한적.</text>
+      <text x="25" y="212" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#C59B27">➔ 기관 포화 상태 (5점 부분 획득)</text>
+      <rect x="20" y="260" width="325" height="95" rx="8" fill="#FFFFFF"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#0B2545">💬 린치의 코멘트:</text>
+      <text x="35" y="310" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"기관들이 이미 많이 들고 있으므로</text>
+      <text x="35" y="330" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">외인 수급에 따라 주가가 출렁일 수 있다."</text>
+      <rect x="20" y="370" width="325" height="32" rx="6" fill="#C59B27"/>
+      <text x="182" y="392" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545" text-anchor="middle">[△] 부분 통과 (+5점)</text>
+    </g>
+  </g>
+</svg>

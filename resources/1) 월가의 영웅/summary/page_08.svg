@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B2545"/>
+      <stop offset="100%" stop-color="#07172C"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C59B27"/>
+      <stop offset="100%" stop-color="#E5C158"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="12" height="720" fill="url(#goldGrad)"/>
+
+  <!-- Top Header -->
+  <g id="header" transform="translate(100, 40)">
+    <rect x="0" y="0" width="120" height="26" rx="13" fill="#134074"/>
+    <text x="60" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#E5C158" text-anchor="middle">CONCLUSION</text>
+    
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="34" font-weight="800" fill="#FFFFFF">피터 린치가 전하는 성공 투자의 5대 황금률</text>
+    <text x="0" y="92" font-family="Pretendard, sans-serif" font-size="17" font-weight="500" fill="#8E9AA8">평생 시장을 이기는 투자자로 살아남기 위한 불변의 원칙</text>
+  </g>
+
+  <!-- 5 Rules Stacked Container -->
+  <g id="rules_container" transform="translate(100, 155)">
+    <!-- Rule 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="1080" height="62" rx="8" fill="#134074" opacity="0.45" stroke="#1E4D82" stroke-width="1"/>
+      <circle cx="40" cy="31" r="16" fill="#C59B27"/>
+      <text x="40" y="37" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#0B2545" text-anchor="middle">1</text>
+      <text x="75" y="37" font-family="Pretendard, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">당신이 잘 알고 이해할 수 있는 비즈니스에만 투자하라.</text>
+      <text x="760" y="37" font-family="Pretendard, sans-serif" font-size="13" font-weight="500" fill="#E5C158">복잡한 테마주 거부, 사업 본질 이해</text>
+    </g>
+
+    <!-- Rule 2 -->
+    <g transform="translate(0, 70)">
+      <rect width="1080" height="62" rx="8" fill="#134074" opacity="0.45" stroke="#1E4D82" stroke-width="1"/>
+      <circle cx="40" cy="31" r="16" fill="#C59B27"/>
+      <text x="40" y="37" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#0B2545" text-anchor="middle">2</text>
+      <text x="75" y="37" font-family="Pretendard, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">단기적인 시장 예측과 거시경제 소음을 완전히 무시하라.</text>
+      <text x="760" y="37" font-family="Pretendard, sans-serif" font-size="13" font-weight="500" fill="#E5C158">금리·경기 예측 불가, 개별 기업 집중</text>
+    </g>
+
+    <!-- Rule 3 -->
+    <g transform="translate(0, 140)">
+      <rect width="1080" height="62" rx="8" fill="#134074" opacity="0.45" stroke="#1E4D82" stroke-width="1"/>
+      <circle cx="40" cy="31" r="16" fill="#C59B27"/>
+      <text x="40" y="37" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#0B2545" text-anchor="middle">3</text>
+      <text x="75" y="37" font-family="Pretendard, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">대박(10루타) 종목은 월가가 아닌 당신의 일상 속에 숨어 있다.</text>
+      <text x="760" y="37" font-family="Pretendard, sans-serif" font-size="13" font-weight="500" fill="#E5C158">현장 관찰, 소기업 성공 모델 복제</text>
+    </g>
+
+    <!-- Rule 4 -->
+    <g transform="translate(0, 210)">
+      <rect width="1080" height="62" rx="8" fill="#134074" opacity="0.45" stroke="#1E4D82" stroke-width="1"/>
+      <circle cx="40" cy="31" r="16" fill="#C59B27"/>
+      <text x="40" y="37" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#0B2545" text-anchor="middle">4</text>
+      <text x="75" y="37" font-family="Pretendard, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">회사의 기본 사업 스토리가 바뀌지 않는 한 계속 보유하라.</text>
+      <text x="760" y="37" font-family="Pretendard, sans-serif" font-size="13" font-weight="500" fill="#E5C158">기계적 손절 금지, 펀더멘털 기준</text>
+    </g>
+
+    <!-- Rule 5 -->
+    <g transform="translate(0, 280)">
+      <rect width="1080" height="62" rx="8" fill="#134074" opacity="0.45" stroke="#1E4D82" stroke-width="1"/>
+      <circle cx="40" cy="31" r="16" fill="#C59B27"/>
+      <text x="40" y="37" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#0B2545" text-anchor="middle">5</text>
+      <text x="75" y="37" font-family="Pretendard, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">주식 투자의 성패는 두뇌가 아니라 배짱과 인내심에 달려 있다.</text>
+      <text x="760" y="37" font-family="Pretendard, sans-serif" font-size="13" font-weight="500" fill="#E5C158">공포를 이겨내는 강한 위장과 배짱</text>
+    </g>
+  </g>
+
+  <!-- CTA Monetization Lead-in Banner -->
+  <g id="cta_banner" transform="translate(100, 525)">
+    <rect width="1080" height="145" rx="12" fill="#134074" stroke="#C59B27" stroke-width="2"/>
+    <rect x="0" y="0" width="8" height="145" fill="#C59B27" rx="4"/>
+    
+    <text x="35" y="40" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#E5C158">🎯 NEXT STAGE : 실전 자가 진단</text>
+    <text x="35" y="75" font-family="Pretendard, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">"당신이 보유한 종목은 피터 린치 청문회를 통과할 수 있을까요?"</text>
+    <text x="35" y="112" font-family="Pretendard, sans-serif" font-size="16" font-weight="500" fill="#8E9AA8">피터 린치의 12가지 독설 질문으로 내 주식을 검증하는 <tspan font-weight="700" fill="#E5C158">[2편: 피터 린치의 종목 청문회 워크북]</tspan>에서 확인하세요.</text>
+    
+    <rect x="860" y="45" width="190" height="55" rx="8" fill="url(#goldGrad)"/>
+    <text x="955" y="79" font-family="Pretendard, sans-serif" font-size="16" font-weight="800" fill="#0B2545" text-anchor="middle">청문회 워크북 열기 ➔</text>
+  </g>
+</svg>

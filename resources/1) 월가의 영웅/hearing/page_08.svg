@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <!-- Top Header -->
+  <g id="header" transform="translate(60, 35)">
+    <rect x="0" y="0" width="150" height="26" rx="13" fill="#0B2545"/>
+    <text x="75" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#E5C158" text-anchor="middle">실전 자가 채점표</text>
+    
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="30" font-weight="800" fill="#0B2545">나의 종목 청문회 실전 채점표 (Printable Worksheet)</text>
+    <text x="0" y="88" font-family="Pretendard, sans-serif" font-size="15" font-weight="500" fill="#5A6578">파워포인트에서 직접 입력하거나 인쇄하여 내 보유 종목을 냉정하게 채점하십시오</text>
+  </g>
+
+  <!-- User Input Box (Top) -->
+  <g id="user_inputs" transform="translate(60, 135)">
+    <rect width="1160" height="55" rx="8" fill="#F4F6F9" stroke="#0B2545" stroke-width="1.5"/>
+    
+    <text x="25" y="34" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#0B2545">진단 대상 종목명 :</text>
+    <rect x="170" y="12" width="220" height="32" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="180" y="34" font-family="Pretendard, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">(예: 삼성전자, 에코프로)</text>
+
+    <text x="420" y="34" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#0B2545">1심 기업 유형 :</text>
+    <rect x="540" y="12" width="220" height="32" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="550" y="34" font-family="Pretendard, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">(고성장주 / 대형우량주 등)</text>
+
+    <text x="790" y="34" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#0B2545">청문회 진단 일자 :</text>
+    <rect x="930" y="12" width="205" height="32" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="945" y="34" font-family="Pretendard, sans-serif" font-size="14" font-weight="500" fill="#94A3B8">2026 .    .    .</text>
+  </g>
+
+  <!-- 12-Item Scoring Matrix Table -->
+  <g id="table_matrix" transform="translate(60, 205)">
+    <!-- Table Header -->
+    <rect width="1160" height="35" rx="4" fill="#0B2545"/>
+    <text x="30" y="23" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">구분</text>
+    <text x="120" y="23" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">심문 항목 및 핵심 검증 기준</text>
+    <text x="800" y="23" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">배점</text>
+    <text x="900" y="23" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">체크 (0~10)</text>
+    <text x="1040" y="23" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">자가 채점</text>
+
+    <!-- Rows (Compact 10 Items to 100 pt total) -->
+    <!-- Row 1 -->
+    <g transform="translate(0, 38)">
+      <rect width="1160" height="32" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#0B2545">2심</text>
+      <text x="120" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">Q1. 크레용 테스트: 아이에게 2분 안에 사업 구조를 그림으로 설명 가능한가?</text>
+      <text x="805" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#5A6578">10점</text>
+      <text x="910" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">[ ] 10  [ ] 0</text>
+      <text x="1060" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">____ 점</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(0, 72)">
+      <rect width="1160" height="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#0B2545">2심</text>
+      <text x="120" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">Q2. 현장 경험: 본인/가족/동료가 열광하며 매장에 줄 서는 모습을 확인했는가?</text>
+      <text x="805" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#5A6578">10점</text>
+      <text x="910" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">[ ] 10  [ ] 0</text>
+      <text x="1060" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">____ 점</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(0, 106)">
+      <rect width="1160" height="32" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#0B2545">2심</text>
+      <text x="120" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">Q3. 소외 선점: 신문 1면과 유튜브에 도배되기 전 소외될 때 발굴했는가?</text>
+      <text x="805" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#5A6578">10점</text>
+      <text x="910" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">[ ] 10  [ ] 0</text>
+      <text x="1060" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">____ 점</text>
+    </g>
+
+    <!-- Row 4 -->
+    <g transform="translate(0, 140)">
+      <rect width="1160" height="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#0B2545">3심</text>
+      <text x="120" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">Q4. 복제력: 한 매장의 성공 공식을 전국/글로벌로 동일하게 복제 가능한가?</text>
+      <text x="805" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#5A6578">10점</text>
+      <text x="910" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">[ ] 10  [ ] 0</text>
+      <text x="1060" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">____ 점</text>
+    </g>
+
+    <!-- Row 5 -->
+    <g transform="translate(0, 174)">
+      <rect width="1160" height="32" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#0B2545">3심</text>
+      <text x="120" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">Q5. PEG 비율: PER을 이익성장률로 나눈 PEG가 1.0 이하로 저평가인가?</text>
+      <text x="805" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#5A6578">10점</text>
+      <text x="910" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">[ ] 10  [ ] 0</text>
+      <text x="1060" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">____ 점</text>
+    </g>
+
+    <!-- Row 6 -->
+    <g transform="translate(0, 208)">
+      <rect width="1160" height="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#0B2545">3심</text>
+      <text x="120" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">Q6. 기관 미보유: 애널리스트 분석이 적고 기관 비중이 낮아 유입 여력 큰가?</text>
+      <text x="805" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#5A6578">10점</text>
+      <text x="910" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">[ ] 10  [ ] 0</text>
+      <text x="1060" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">____ 점</text>
+    </g>
+
+    <!-- Row 7 -->
+    <g transform="translate(0, 242)">
+      <rect width="1160" height="32" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#0B2545">4심</text>
+      <text x="120" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">Q7. 사업다악화 부재: 본업과 무관한 엉뚱한 M&amp;A 낭비가 없는가?</text>
+      <text x="805" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#5A6578">10점</text>
+      <text x="910" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">[ ] 10  [ ] 0</text>
+      <text x="1060" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">____ 점</text>
+    </g>
+
+    <!-- Row 8 -->
+    <g transform="translate(0, 276)">
+      <rect width="1160" height="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#0B2545">4심</text>
+      <text x="120" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">Q8. 재무 건전성: 순현금이 풍부하고 과도한 부채 위험이 없는가?</text>
+      <text x="805" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#5A6578">10점</text>
+      <text x="910" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">[ ] 10  [ ] 0</text>
+      <text x="1060" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">____ 점</text>
+    </g>
+
+    <!-- Row 9 -->
+    <g transform="translate(0, 310)">
+      <rect width="1160" height="32" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#0B2545">5심</text>
+      <text x="120" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">Q9. 폭락장 감내: 내일 -30% 폭락해도 공포 없이 추가 매수할 확신이 있는가?</text>
+      <text x="805" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#5A6578">10점</text>
+      <text x="910" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">[ ] 10  [ ] 0</text>
+      <text x="1060" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">____ 점</text>
+    </g>
+
+    <!-- Row 10 -->
+    <g transform="translate(0, 344)">
+      <rect width="1160" height="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#0B2545">5심</text>
+      <text x="120" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">Q10. 여유 자금: 3년 이상 쓸 일 없는 순수 여유 자금으로 매수했는가?</text>
+      <text x="805" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#5A6578">10점</text>
+      <text x="910" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">[ ] 10  [ ] 0</text>
+      <text x="1060" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">____ 점</text>
+    </g>
+  </g>
+
+  <!-- Total Score & Final Verdict Box (Bottom) -->
+  <g id="final_verdict_box" transform="translate(60, 600)">
+    <rect width="1160" height="85" rx="10" fill="#0B2545"/>
+    <rect x="0" y="0" width="8" height="85" fill="#C59B27" rx="4"/>
+
+    <text x="35" y="36" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#E5C158">최종 청문회 총점 :</text>
+    <text x="195" y="38" font-family="Pretendard, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">_______ / 100점</text>
+
+    <text x="450" y="36" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#E5C158">피터 린치의 최종 선고 판정 :</text>
+    <rect x="680" y="16" width="450" height="34" rx="6" fill="#134074"/>
+    <text x="695" y="38" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">[ ] 10루타 후보  [ ] 우량방어  [ ] 관찰  [ ] 즉시손절</text>
+
+    <text x="35" y="68" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#8E9AA8">※ 50점 미만 종목은 시장에 관계없이 즉시 매도하여 자산을 보호하십시오. (피터 린치)</text>
+  </g>
+</svg>

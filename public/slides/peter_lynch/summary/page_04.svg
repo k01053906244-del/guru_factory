@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C59B27"/>
+      <stop offset="100%" stop-color="#E5C158"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <!-- Top Header -->
+  <g id="header" transform="translate(60, 45)">
+    <rect x="0" y="0" width="165" height="26" rx="13" fill="#F4F6F9"/>
+    <text x="82" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#C59B27" text-anchor="middle">PART 2. 시장관 및 심리</text>
+    
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="34" font-weight="800" fill="#0B2545">시장 예측은 불가능하다: 칵테일 파티 이론과 대중 심리</text>
+    <text x="0" y="94" font-family="Pretendard, sans-serif" font-size="18" font-weight="500" fill="#5A6578">주식 시장의 거시 경제를 예측하려 하지 말고, 군중의 심리와 기업의 본질에 집중하라</text>
+  </g>
+
+  <!-- 2 Columns Layout -->
+  <g id="two_columns" transform="translate(60, 170)">
+    <!-- Left Column: 시장 예측의 환상 -->
+    <g id="left_col" transform="translate(0, 0)">
+      <rect width="560" height="480" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="560" height="6" fill="#0B2545" rx="3"/>
+
+      <text x="35" y="45" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#0B2545">1. 거시경제와 주식시장 예측의 무용성</text>
+      
+      <!-- Quote Card -->
+      <rect x="35" y="70" width="490" height="95" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <rect x="35" y="70" width="5" height="95" fill="#C59B27" rx="2"/>
+      <text x="55" y="105" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#0B2545">"주식시장을 예측해서 돈을 번 사람은 없다."</text>
+      <text x="55" y="132" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#5A6578">만일 시장을 예측해야만 돈을 벌 수 있었다면,</text>
+      <text x="55" y="152" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#5A6578">나는 펀드매니저로서 한 푼도 벌지 못했을 것이다.</text>
+
+      <!-- Key Insights -->
+      <g transform="translate(35, 190)">
+        <text x="0" y="25" font-family="Pretendard, sans-serif" font-size="17" font-weight="700" fill="#134074">• 금리와 경제 전망에 시간 낭비 금지</text>
+        <text x="0" y="52" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">매년 수천 명의 전문가들이 금리, 인플레이션, 경기침체를</text>
+        <text x="0" y="74" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">예측하지만 맞추는 사람은 거의 없다.</text>
+
+        <text x="0" y="120" font-family="Pretendard, sans-serif" font-size="17" font-weight="700" fill="#134074">• 시장이 아닌 기업에 집중하라</text>
+        <text x="0" y="147" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">시장은 단지 주식을 사고파는 장소일 뿐이다.</text>
+        <text x="0" y="169" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">가격이 기업 가치보다 합리적인지만 판단하라.</text>
+
+        <text x="0" y="215" font-family="Pretendard, sans-serif" font-size="17" font-weight="700" fill="#134074">• 폭락장은 최고의 선물</text>
+        <text x="0" y="242" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">몇 년마다 찾아오는 시장 폭락은 우량 기업을</text>
+        <text x="0" y="264" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">바겐세일 가격에 주워 담을 수 있는 절호의 기회다.</text>
+      </g>
+    </g>
+
+    <!-- Right Column: 칵테일 파티 이론 -->
+    <g id="right_col" transform="translate(600, 0)">
+      <rect width="560" height="480" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="560" height="6" fill="#C59B27" rx="3"/>
+
+      <text x="35" y="45" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#0B2545">2. 피터 린치의 칵테일 파티 4단계 이론</text>
+
+      <!-- 4 Stages Container -->
+      <g transform="translate(35, 70)">
+        <!-- Stage 1 -->
+        <rect x="0" y="0" width="490" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+        <circle cx="35" cy="42" r="18" fill="#0B2545"/>
+        <text x="35" y="48" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#E5C158" text-anchor="middle">1단계</text>
+        <text x="70" y="33" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#0B2545">무관심과 외면 (시장의 바닥)</text>
+        <text x="70" y="58" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#5A6578">펀드매니저라고 소개하면 치과의사와만 대화 → <tspan font-weight="700" fill="#10B981">매수 적기</tspan></text>
+
+        <!-- Stage 2 -->
+        <rect x="0" y="98" width="490" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+        <circle cx="35" cy="140" r="18" fill="#0B2545"/>
+        <text x="35" y="146" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2단계</text>
+        <text x="70" y="131" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#0B2545">경계와 회의 (시장 상승 초기)</text>
+        <text x="70" y="156" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#5A6578">주식 이야기를 조금 나누지만 여전히 위험하다고 생각함</text>
+
+        <!-- Stage 3 -->
+        <rect x="0" y="196" width="490" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+        <circle cx="35" cy="238" r="18" fill="#C59B27"/>
+        <text x="35" y="244" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#0B2545" text-anchor="middle">3단계</text>
+        <text x="70" y="229" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#0B2545">대중의 열광 (시장 상승 중기)</text>
+        <text x="70" y="254" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#5A6578">파티 참석자들이 펀드매니저 주변으로 몰려와 종목을 물어봄</text>
+
+        <!-- Stage 4 -->
+        <rect x="0" y="294" width="490" height="95" rx="8" fill="#FEE2E2" stroke="#FCA5A5" stroke-width="1"/>
+        <circle cx="35" cy="341" r="18" fill="#DC2626"/>
+        <text x="35" y="347" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">4단계</text>
+        <text x="70" y="330" font-family="Pretendard, sans-serif" font-size="16" font-weight="800" fill="#DC2626">탐욕과 광기 (시장의 고점)</text>
+        <text x="70" y="355" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#991B1B">치과의사가 펀드매니저에게 종목을 추천하기 시작함 → <tspan font-weight="800" fill="#DC2626">위험 신호</tspan></text>
+        <text x="70" y="375" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#991B1B">모든 사람이 주식으로 돈을 벌고 있다고 확신하는 시점</text>
+      </g>
+    </g>
+  </g>
+</svg>

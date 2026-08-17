@@ -1,0 +1,50 @@
+[
+  {
+    "id": "peter_lynch_one_up",
+    "title": "전설로 떠나는 월가의 영웅",
+    "author": "피터 린치 (Peter Lynch)",
+    "masterName": "피터 린치",
+    "masterRole": "전 월가 마젤란 펀드 매니저 (연평균 29.2%)",
+    "coverImage": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800&auto=format&fit=crop",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDYpEdl9w7mMgImKMZxPDVPZbP6aJ3tb_M6iDOawhMALJnbfh9G8oZko2fG_yEgnGpno8YP2upgUOrSCv8wXEgL-uUs4-NUDKQ03yoxzxpDZBk-42W1_U8cqEDYhP8LCTt_eATpaYQV0DMzhNMZ7Ab3rRX4ratPoCqGAwctU57vCI6PpuSkoT0Ph3HdL9zrCaDvXJubp1hgM0GRG7Jz0c5G5TOOFC8hzMzWv94R6xCnrUDHukGaRa303A",
+    "tagline": "일상 생활 속에서 10배 주식(Ten-Bagger)을 찾는 법",
+    "readersCount": 5420,
+    "status": "AVAILABLE"
+  },
+  {
+    "id": "warren_buffett_snowball",
+    "title": "스노볼: 워런 버핏의 삶과 투자",
+    "author": "앨리스 슈뢰더 / 워런 버핏",
+    "masterName": "워런 버핏",
+    "masterRole": "버크셔 해서웨이 회장 (가치투자의 현인)",
+    "coverImage": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800&auto=format&fit=crop",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop",
+    "tagline": "복리의 마법과 장기 경제적 해자를 구축하는 지혜",
+    "readersCount": 4210,
+    "status": "UPCOMING"
+  },
+  {
+    "id": "benjamin_graham_intelligent",
+    "title": "현명한 투자자",
+    "author": "벤저민 그레이엄",
+    "masterName": "벤저민 그레이엄",
+    "masterRole": "가치투자의 아버지",
+    "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
+    "tagline": "안전마진과 시장 씨(Mr. Market)를 다루는 불멸의 원칙",
+    "readersCount": 3890,
+    "status": "UPCOMING"
+  },
+  {
+    "id": "andre_kostolany_money",
+    "title": "돈, 뜨겁게 사랑하고 차갑게 다루어라",
+    "author": "앙드레 코스톨라니",
+    "masterName": "앙드레 코스톨라니",
+    "masterRole": "유럽 투자의 대부",
+    "coverImage": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=800&auto=format&fit=crop",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop",
+    "tagline": "코스톨라니 달걀 모델과 심리학적 수급 법칙",
+    "readersCount": 3120,
+    "status": "UPCOMING"
+  }
+]

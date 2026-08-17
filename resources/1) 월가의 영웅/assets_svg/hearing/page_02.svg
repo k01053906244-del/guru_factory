@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <!-- Top Header -->
+  <g id="header" transform="translate(60, 45)">
+    <rect x="0" y="0" width="140" height="26" rx="13" fill="#F4F6F9"/>
+    <text x="70" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#C59B27" text-anchor="middle">1심 : 신분 심문</text>
+    
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="32" font-weight="800" fill="#0B2545">"당신이 산 주식의 정체는 무엇인가?" (6대 유형 자가 분류)</text>
+    <text x="0" y="94" font-family="Pretendard, sans-serif" font-size="17" font-weight="500" fill="#5A6578">기업의 유형을 모른 채 투자하는 것은 목적지 없이 바다로 나가는 것과 같다</text>
+  </g>
+
+  <!-- 6-Category Grid -->
+  <g id="category_grid" transform="translate(60, 160)">
+    <!-- 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="365" height="225" rx="10" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="5" fill="#64748B" rx="2"/>
+      <text x="20" y="35" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#0B2545">1. 저성장주 (Slow Growers)</text>
+      <text x="20" y="60" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#C59B27">연 2~4% 성장 | 배당 목적</text>
+      <line x1="20" y1="75" x2="345" y2="75" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="20" y="105" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 전기, 가스, 유틸리티 등 성숙기 대기업</text>
+      <text x="20" y="130" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 주가 대박은 기대 금지, 오직 정기 배당</text>
+      <rect x="20" y="175" width="325" height="30" rx="6" fill="#FFFFFF"/>
+      <text x="35" y="195" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#64748B">💡 기대수익: 연 5~8% (배당 포함)</text>
+    </g>
+
+    <!-- 2 -->
+    <g transform="translate(397, 0)">
+      <rect width="365" height="225" rx="10" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="5" fill="#0B2545" rx="2"/>
+      <text x="20" y="35" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#0B2545">2. 대형우량주 (Stalwarts)</text>
+      <text x="20" y="60" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#C59B27">연 10~12% 성장 | 포트폴리오 방패</text>
+      <line x1="20" y1="75" x2="345" y2="75" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="20" y="105" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 코카콜라, 존슨앤존슨 등 독점적 대기업</text>
+      <text x="20" y="130" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 폭락장 방어력 우수, 30~50% 상승 시 교체</text>
+      <rect x="20" y="175" width="325" height="30" rx="6" fill="#FFFFFF"/>
+      <text x="35" y="195" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#0B2545">💡 기대수익: 연 10~15% 수준</text>
+    </g>
+
+    <!-- 3 -->
+    <g transform="translate(795, 0)">
+      <rect width="365" height="225" rx="10" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="5" fill="#EAB308" rx="2"/>
+      <text x="20" y="35" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#0B2545">3. 경기순환주 (Cyclicals)</text>
+      <text x="20" y="60" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#C59B27">사이클 롤러코스터 | 타이밍 싸움</text>
+      <line x1="20" y1="75" x2="345" y2="75" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="20" y="105" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 자동차, 철강, 화학, 반도체 제조</text>
+      <text x="20" y="130" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 고점에서 PER 낮고, 바닥에서 PER 높음</text>
+      <rect x="20" y="175" width="325" height="30" rx="6" fill="#FEF3C7"/>
+      <text x="35" y="195" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#92400E">⚠️ 고점 매수 시 최악의 장기 물림</text>
+    </g>
+
+    <!-- 4 -->
+    <g transform="translate(0, 245)">
+      <rect width="365" height="225" rx="10" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="5" fill="#C59B27" rx="2"/>
+      <text x="20" y="35" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#0B2545">4. 고성장주 (Fast Growers) ⭐</text>
+      <text x="20" y="60" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#C59B27">연 20~25% 폭발 성장 | 10루타 주역</text>
+      <line x1="20" y1="75" x2="345" y2="75" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="20" y="105" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 성공 공식을 전국으로 복제하는 강소기업</text>
+      <text x="20" y="130" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 기관 비중이 낮고 PER 20~25 선호</text>
+      <rect x="20" y="175" width="325" height="30" rx="6" fill="#FEF9C3"/>
+      <text x="35" y="195" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#854D0E">🎯 10배~100배 수익의 산실</text>
+    </g>
+
+    <!-- 5 -->
+    <g transform="translate(397, 245)">
+      <rect width="365" height="225" rx="10" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="5" fill="#10B981" rx="2"/>
+      <text x="20" y="35" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#0B2545">5. 회생주 (Turnarounds)</text>
+      <text x="20" y="60" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#C59B27">파산 위기 극복 | 턴어라운드</text>
+      <line x1="20" y1="75" x2="345" y2="75" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="20" y="105" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 극도의 저평가 상태에서 구조조정 성공</text>
+      <text x="20" y="130" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 무수익 사업 매각 및 부채 해결 확인</text>
+      <rect x="20" y="175" width="325" height="30" rx="6" fill="#DCFCE7"/>
+      <text x="35" y="195" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#166534">🔥 하이 리스크, 초고수익 반등</text>
+    </g>
+
+    <!-- 6 -->
+    <g transform="translate(795, 245)">
+      <rect width="365" height="225" rx="10" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="5" fill="#3B82F6" rx="2"/>
+      <text x="20" y="35" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#0B2545">6. 자산주 (Asset Plays)</text>
+      <text x="20" y="60" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#C59B27">숨겨진 알짜 자산 | 안전마진</text>
+      <line x1="20" y1="75" x2="345" y2="75" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="20" y="105" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 장부상 부동산, 유가증권, 특허 가치 보유</text>
+      <text x="20" y="130" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 숨겨진 자산 가치 &gt; 현재 시가총액</text>
+      <rect x="20" y="175" width="325" height="30" rx="6" fill="#DBEAFE"/>
+      <text x="35" y="195" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#1E40AF">🛡️ 하방 경직성이 확보된 안전 투자</text>
+    </g>
+  </g>
+
+  <!-- Bottom 1-Line Rule -->
+  <g id="bottom_rule" transform="translate(60, 645)">
+    <rect width="1160" height="40" rx="6" fill="#0B2545"/>
+    <text x="580" y="25" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle">⚖️ 1심 판결 규칙: 당신의 종목이 위 6가지 중 어디에 해당하는지 먼저 확정하고 2심으로 넘어가십시오.</text>
+  </g>
+</svg>

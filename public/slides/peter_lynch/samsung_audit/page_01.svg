@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B2545"/>
+      <stop offset="100%" stop-color="#061324"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C59B27"/>
+      <stop offset="100%" stop-color="#E5C158"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="12" height="720" fill="url(#goldGrad)"/>
+
+  <g id="cover_content" transform="translate(100, 120)">
+    <rect x="0" y="0" width="310" height="36" rx="18" fill="#134074"/>
+    <text x="155" y="23" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#E5C158" text-anchor="middle">실전 종목 청문회 감사 리포트</text>
+
+    <text x="0" y="105" font-family="Pretendard, sans-serif" font-size="52" font-weight="800" fill="#FFFFFF" letter-spacing="-1">삼성전자 vs 피터 린치</text>
+    <text x="0" y="155" font-family="Pretendard, sans-serif" font-size="30" font-weight="700" fill="#E5C158">종목 청문회 최종 진단 보고서</text>
+
+    <rect x="0" y="185" width="80" height="6" fill="url(#goldGrad)" rx="3"/>
+
+    <rect x="0" y="220" width="760" height="130" rx="12" fill="#134074" opacity="0.6"/>
+    <rect x="0" y="220" width="6" height="130" fill="#C59B27" rx="3"/>
+    <text x="30" y="258" font-family="Pretendard, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">🎯 진단 결과 요약: 총점 85점 / 100점 (🛡️ 든든한 대형 우량주)</text>
+    <text x="30" y="290" font-family="Pretendard, sans-serif" font-size="15" font-weight="500" fill="#E5C158">"순현금 100조 원과 PEG 0.9의 안전마진 확보, 30~50% 반등 시 교체 매매 권고"</text>
+    <text x="30" y="325" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#8E9AA8">피터 린치 10대 심문 공식 및 실시간 재무 데이터 기반 정밀 판결문</text>
+
+    <g transform="translate(0, 420)">
+      <text x="0" y="0" font-family="Pretendard, sans-serif" font-size="15" font-weight="500" fill="#8E9AA8">진단 대상: 삼성전자 (005930.KS) | 진단 기준: Peter Lynch Framework</text>
+      <text x="0" y="25" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#5A6578">투자구루를 만나기 위한 여정 | 구루 팩토리 자동화 엔진</text>
+    </g>
+  </g>
+
+  <g id="right_score_card" transform="translate(900, 170)">
+    <rect width="280" height="420" rx="14" fill="#134074" opacity="0.5" stroke="#1E4D82" stroke-width="1.5"/>
+    <rect x="30" y="30" width="220" height="65" rx="8" fill="#0B2545"/>
+    <text x="140" y="55" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#8E9AA8" text-anchor="middle">피터 린치 종합 평점</text>
+    <text x="140" y="83" font-family="Pretendard, sans-serif" font-size="26" font-weight="800" fill="#E5C158" text-anchor="middle">85 / 100점</text>
+
+    <line x1="30" y1="115" x2="250" y2="115" stroke="#1E4D82" stroke-width="1"/>
+
+    <text x="35" y="145" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">1심 (신분): 대형우량주</text>
+    <text x="35" y="180" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">2심 (상식): 20 / 30점</text>
+    <text x="35" y="215" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">3심 (재무): 25 / 30점</text>
+    <text x="35" y="250" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">4심 (뻘짓): 30 / 30점</text>
+    <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">5심 (멘탈): 20 / 20점</text>
+
+    <rect x="25" y="330" width="230" height="55" rx="8" fill="url(#goldGrad)"/>
+    <text x="140" y="354" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#0B2545" text-anchor="middle">최종 선고: 🛡️ 우량 방어주</text>
+    <text x="140" y="374" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#0B2545" text-anchor="middle">(보유 &amp; 30~50% 반등 시 교체)</text>
+  </g>
+</svg>

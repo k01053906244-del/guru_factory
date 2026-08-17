@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <g id="header" transform="translate(60, 45)">
+    <rect x="0" y="0" width="150" height="26" rx="13" fill="#DCFCE7"/>
+    <text x="75" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#166534" text-anchor="middle">최종 선고문</text>
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="32" font-weight="800" fill="#0B2545">피터 린치의 최종 판결 : 85점 / 100점 (🛡️ 든든한 우량 방어주)</text>
+    <text x="0" y="94" font-family="Pretendard, sans-serif" font-size="17" font-weight="500" fill="#5A6578">"포트폴리오의 든든한 기둥이다. 30~50% 반등하여 적정가치에 도달하면 다른 소외주로 교체하라."</text>
+  </g>
+
+  <g id="verdict_container" transform="translate(60, 160)">
+    <rect width="1160" height="420" rx="14" fill="#F4F6F9" stroke="#0B2545" stroke-width="2"/>
+    <rect x="0" y="0" width="12" height="420" fill="#C59B27" rx="4"/>
+
+    <g transform="translate(40, 35)">
+      <rect x="0" y="0" width="180" height="40" rx="8" fill="#16A34A"/>
+      <text x="90" y="26" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" text-anchor="middle">🛡️ 85점 : 2등급 우량주</text>
+      <text x="200" y="28" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#0B2545">행동 지침: [보유 및 30~50% 반등 시 교체 매매 준비]</text>
+
+      <line x1="0" y1="60" x2="1080" y2="60" stroke="#CBD5E1" stroke-width="1"/>
+
+      <text x="0" y="100" font-family="Pretendard, sans-serif" font-size="17" font-weight="700" fill="#0B2545">📜 피터 린치의 최종 선고문 전문:</text>
+      
+      <rect x="0" y="120" width="1080" height="130" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="155" font-family="Pretendard, sans-serif" font-size="15" font-weight="500" fill="#1D2430">"삼성전자는 10루타를 노릴 수 있는 신생 고성장주는 아니지만, 현금 100조 원과 세계 1위 반도체 독점력을</text>
+      <text x="25" y="185" font-family="Pretendard, sans-serif" font-size="15" font-weight="500" fill="#1D2430">보유한 훌륭한 대형우량주(Stalwart)다. PEG 0.86 수준의 가격은 하방 안전마진을 보장한다.</text>
+      <text x="25" y="215" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#0B2545">지금은 팔 때가 아니며 보유(Hold)하고, 향후 사이클 회복으로 30~50% 상승하면 이익을 실현하라."</text>
+
+      <g transform="translate(0, 275)">
+        <rect width="345" height="60" rx="6" fill="#0B2545"/>
+        <text x="172" y="26" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#8E9AA8" text-anchor="middle">추천 포트폴리오 비중</text>
+        <text x="172" y="47" font-family="Pretendard, sans-serif" font-size="16" font-weight="800" fill="#E5C158" text-anchor="middle">전체 자산의 20~30%</text>
+
+        <rect x="365" width="345" height="60" rx="6" fill="#0B2545"/>
+        <text x="537" y="26" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#8E9AA8" text-anchor="middle">목표 수익률 밴드</text>
+        <text x="537" y="47" font-family="Pretendard, sans-serif" font-size="16" font-weight="800" fill="#E5C158" text-anchor="middle">+30% ~ +50% (차익 실현)</text>
+
+        <rect x="730" width="350" height="60" rx="6" fill="#0B2545"/>
+        <text x="905" y="26" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#8E9AA8" text-anchor="middle">손절매 여부</text>
+        <text x="905" y="47" font-family="Pretendard, sans-serif" font-size="16" font-weight="800" fill="#10B981" text-anchor="middle">기계적 손절매 금지 (보유)</text>
+      </g>
+    </g>
+  </g>
+</svg>

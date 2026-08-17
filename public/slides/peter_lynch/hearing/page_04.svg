@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <!-- Top Header -->
+  <g id="header" transform="translate(60, 45)">
+    <rect x="0" y="0" width="140" height="26" rx="13" fill="#F4F6F9"/>
+    <text x="70" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#C59B27" text-anchor="middle">3심 : 재무 심문</text>
+    
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="32" font-weight="800" fill="#0B2545">"성공 공식 복제력 &amp; 숫자의 진실"</text>
+    <text x="0" y="94" font-family="Pretendard, sans-serif" font-size="17" font-weight="500" fill="#5A6578">입증된 비즈니스 모델의 전국 복제력과 합리적인 가격(PEG)을 갖췄는가?</text>
+  </g>
+
+  <!-- 3 Question Cards -->
+  <g id="questions_layout" transform="translate(60, 160)">
+    <!-- Q4 -->
+    <g transform="translate(0, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#0B2545" rx="3"/>
+      
+      <rect x="25" y="25" width="60" height="28" rx="6" fill="#0B2545"/>
+      <text x="55" y="44" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#E5C158" text-anchor="middle">Q4</text>
+      
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#0B2545">성공 공식 복제 능력</text>
+      <text x="25" y="110" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#C59B27">전국 확장 여력이 있는가?</text>
+      <line x1="25" y1="125" x2="340" y2="125" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="25" y="160" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#134074">■ 질문 내용:</text>
+      <text x="25" y="185" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">한 매장이나 특정 지역에서 검증된 성공</text>
+      <text x="25" y="207" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">공식을 전국(또는 글로벌)으로 똑같이</text>
+      <text x="25" y="229" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">복제하여 확장할 시장 여력이 충분한가?</text>
+
+      <rect x="20" y="260" width="325" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">💬 피터 린치의 팩폭:</text>
+      <text x="35" y="308" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"월마트는 작은 시골 마을을 복제하며</text>
+      <text x="35" y="328" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">전국으로 뻗어나가 100배 주식이 되었다."</text>
+
+      <rect x="20" y="360" width="325" height="40" rx="8" fill="#0B2545"/>
+      <text x="182" y="385" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">[ ] 통과 (10점) / [ ] 불합격 (0점)</text>
+    </g>
+
+    <!-- Q5 -->
+    <g transform="translate(397, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#C59B27" rx="3"/>
+      
+      <rect x="25" y="25" width="60" height="28" rx="6" fill="#C59B27"/>
+      <text x="55" y="44" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#0B2545" text-anchor="middle">Q5</text>
+      
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#0B2545">PEG 비율 검증</text>
+      <text x="25" y="110" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#C59B27">성장률 대비 PER이 적정한가?</text>
+      <line x1="25" y1="125" x2="340" y2="125" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="25" y="160" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#134074">■ 질문 내용:</text>
+      <text x="25" y="185" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">PER을 연간 이익성장률로 나눈 값</text>
+      <text x="25" y="207" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#0B2545">(PEG = PER ÷ 성장률)</text>
+      <text x="25" y="229" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">이 1.0 이하(안전)인가? (2.0 이상은 위험)</text>
+
+      <rect x="20" y="260" width="325" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">💬 피터 린치의 팩폭:</text>
+      <text x="35" y="308" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"성장률 20% 기업의 PER이 40이면 비싸다.</text>
+      <text x="35" y="328" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">PER은 성장률과 비슷하거나 낮아야 한다."</text>
+
+      <rect x="20" y="360" width="325" height="40" rx="8" fill="#0B2545"/>
+      <text x="182" y="385" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">[ ] 통과 (10점) / [ ] 불합격 (0점)</text>
+    </g>
+
+    <!-- Q6 -->
+    <g transform="translate(795, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#134074" rx="3"/>
+      
+      <rect x="25" y="25" width="60" height="28" rx="6" fill="#134074"/>
+      <text x="55" y="44" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Q6</text>
+      
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#0B2545">기관 미보유 프리미엄</text>
+      <text x="25" y="110" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#C59B27">월가가 아직 모르는가?</text>
+      <line x1="25" y1="125" x2="340" y2="125" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="25" y="160" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#134074">■ 질문 내용:</text>
+      <text x="25" y="185" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">증권사 분석 리포트가 거의 없고,</text>
+      <text x="25" y="207" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">기관투자자 지분율이 20~30% 미만으로</text>
+      <text x="25" y="229" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">낮아 향후 기관 매수 유입 여력이 큰가?</text>
+
+      <rect x="20" y="260" width="325" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">💬 피터 린치의 팩폭:</text>
+      <text x="35" y="308" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"기관이 가득 찬 종목은 팔 사람만 남았다.</text>
+      <text x="35" y="328" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">기관이 없을 때 사서 기관에 넘겨라."</text>
+
+      <rect x="20" y="360" width="325" height="40" rx="8" fill="#0B2545"/>
+      <text x="182" y="385" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">[ ] 통과 (10점) / [ ] 불합격 (0점)</text>
+    </g>
+  </g>
+
+  <!-- Bottom Indicator -->
+  <g id="bottom_indicator" transform="translate(60, 610)">
+    <rect width="1160" height="50" rx="8" fill="#0B2545"/>
+    <text x="40" y="31" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">3심 총점 : _____ / 30점  (PEG 2.0 이상 고평가 종목은 0점 감점 처리)</text>
+  </g>
+</svg>

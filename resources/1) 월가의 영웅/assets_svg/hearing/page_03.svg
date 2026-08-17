@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <!-- Top Header -->
+  <g id="header" transform="translate(60, 45)">
+    <rect x="0" y="0" width="140" height="26" rx="13" fill="#F4F6F9"/>
+    <text x="70" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#C59B27" text-anchor="middle">2심 : 상식 심문</text>
+    
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="32" font-weight="800" fill="#0B2545">"크레용 테스트 &amp; 일상 관찰 심문"</text>
+    <text x="0" y="94" font-family="Pretendard, sans-serif" font-size="17" font-weight="500" fill="#5A6578">복잡한 금융 공학 뒤에 숨지 말고, 초등학생도 이해할 수 있는 상식으로 증명하라</text>
+  </g>
+
+  <!-- 3 Question Cards -->
+  <g id="questions_layout" transform="translate(60, 160)">
+    <!-- Q1 -->
+    <g transform="translate(0, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#0B2545" rx="3"/>
+      
+      <rect x="25" y="25" width="60" height="28" rx="6" fill="#0B2545"/>
+      <text x="55" y="44" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#E5C158" text-anchor="middle">Q1</text>
+      
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#0B2545">크레용 테스트</text>
+      <text x="25" y="110" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#C59B27">2분 안에 설명 가능한가?</text>
+      <line x1="25" y1="125" x2="340" y2="125" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="25" y="160" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#134074">■ 질문 내용:</text>
+      <text x="25" y="185" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">초등학생에게 크레용으로 이 회사가</text>
+      <text x="25" y="207" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">어떻게 돈을 버는지 2분 안에 그림을</text>
+      <text x="25" y="229" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">그려가며 쉽게 설명할 수 있는가?</text>
+
+      <rect x="20" y="260" width="325" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">💬 피터 린치의 팩폭:</text>
+      <text x="35" y="308" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"어린아이에게 설명할 수 없는 복잡한</text>
+      <text x="35" y="328" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">사업은 당신도 모르는 것이다. 사지 마라."</text>
+
+      <rect x="20" y="360" width="325" height="40" rx="8" fill="#0B2545"/>
+      <text x="182" y="385" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">[ ] 통과 (10점) / [ ] 불합격 (0점)</text>
+    </g>
+
+    <!-- Q2 -->
+    <g transform="translate(397, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#C59B27" rx="3"/>
+      
+      <rect x="25" y="25" width="60" height="28" rx="6" fill="#C59B27"/>
+      <text x="55" y="44" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#0B2545" text-anchor="middle">Q2</text>
+      
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#0B2545">현장 관찰 우위</text>
+      <text x="25" y="110" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#C59B27">직접 경험해 보았는가?</text>
+      <line x1="25" y1="125" x2="340" y2="125" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="25" y="160" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#134074">■ 질문 내용:</text>
+      <text x="25" y="185" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">당신, 가족, 직장 동료가 이 기업의</text>
+      <text x="25" y="207" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">제품/서비스에 열광하며 매장에 줄을 서는</text>
+      <text x="25" y="229" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">모습을 직접 두 눈으로 확인했는가?</text>
+
+      <rect x="20" y="260" width="325" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">💬 피터 린치의 팩폭:</text>
+      <text x="35" y="308" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"사모님이 열광한 던킨도너츠와 레그스는</text>
+      <text x="35" y="328" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">월가 전문가보다 1년 먼저 발견되었다."</text>
+
+      <rect x="20" y="360" width="325" height="40" rx="8" fill="#0B2545"/>
+      <text x="182" y="385" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">[ ] 통과 (10점) / [ ] 불합격 (0점)</text>
+    </g>
+
+    <!-- Q3 -->
+    <g transform="translate(795, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#134074" rx="3"/>
+      
+      <rect x="25" y="25" width="60" height="28" rx="6" fill="#134074"/>
+      <text x="55" y="44" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Q3</text>
+      
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#0B2545">소외주 선점 여부</text>
+      <text x="25" y="110" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#C59B27">언론 보도 전에 샀는가?</text>
+      <line x1="25" y1="125" x2="340" y2="125" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="25" y="160" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#134074">■ 질문 내용:</text>
+      <text x="25" y="185" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">신문 1면이나 유튜브 인기 영상에서</text>
+      <text x="25" y="207" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">매일 다루기 전, 아직 대중의 관심이</text>
+      <text x="25" y="229" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">미미할 때 먼저 발굴한 종목인가?</text>
+
+      <rect x="20" y="260" width="325" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#0B2545">💬 피터 린치의 팩폭:</text>
+      <text x="35" y="308" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"모두가 칭찬하는 유명한 주식은 이미</text>
+      <text x="35" y="328" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">비싸다. 따분하고 소외된 곳에 기회가 있다."</text>
+
+      <rect x="20" y="360" width="325" height="40" rx="8" fill="#0B2545"/>
+      <text x="182" y="385" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">[ ] 통과 (10점) / [ ] 불합격 (0점)</text>
+    </g>
+  </g>
+
+  <!-- Bottom Indicator -->
+  <g id="bottom_indicator" transform="translate(60, 610)">
+    <rect width="1160" height="50" rx="8" fill="#0B2545"/>
+    <text x="40" y="31" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">2심 총점 : _____ / 30점  (모르는 사업에 투자했다면 즉시 0점 처리하십시오)</text>
+  </g>
+</svg>

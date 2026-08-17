@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "guru_id": "peter_lynch",
+  "guru_name": "피터 린치",
+  "stock_name": "삼성전자",
+  "category": "대형우량주 (Stalwarts)",
+  "total_score": 85,
+  "max_score": 100,
+  "verdict": {
+    "tier": "든든한 우량 방어주",
+    "badge": "🛡️",
+    "action": "보유 & 적정가 도달 시 교체 매매",
+    "verdict_text": "포트폴리오의 안정적 기둥이다. 30~50% 상승하여 적정 가치에 도달하면 다른 소외된 우량주로 교체 매매를 검토하라."
+  },
+  "financial_indicators_applied": {
+    "peg_ratio": 0.86,
+    "forward_per": 13.0,
+    "expected_growth": "15%+",
+    "net_cash": "약 100조 원",
+    "debt_to_equity": "25% 미만",
+    "institutional_ownership": "54.0%"
+  }
+}

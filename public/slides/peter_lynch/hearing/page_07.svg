@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <!-- Top Header -->
+  <g id="header" transform="translate(60, 45)">
+    <rect x="0" y="0" width="140" height="26" rx="13" fill="#F4F6F9"/>
+    <text x="70" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#C59B27" text-anchor="middle">최종 선고 매트릭스</text>
+    
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="32" font-weight="800" fill="#0B2545">피터 린치의 최종 선고: 점수대별 행동 지침</text>
+    <text x="0" y="94" font-family="Pretendard, sans-serif" font-size="17" font-weight="500" fill="#5A6578">청문회 총점(100점 만점)에 따라 냉정하게 매수, 보유, 교체 매매, 즉시 손절을 집행하라</text>
+  </g>
+
+  <!-- 4 Verdict Tier Rows -->
+  <g id="verdict_rows" transform="translate(60, 160)">
+    <!-- Tier 1: 90~100점 -->
+    <g transform="translate(0, 0)">
+      <rect width="1160" height="110" rx="10" fill="#FEF9C3" stroke="#FDE047" stroke-width="1.5"/>
+      <rect width="8" height="110" fill="#CA8A04" rx="4"/>
+      
+      <rect x="30" y="20" width="140" height="32" rx="6" fill="#CA8A04"/>
+      <text x="100" y="42" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF" text-anchor="middle">90 ~ 100점</text>
+      <text x="190" y="44" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#854D0E">💎 10루타(Ten-Bagger) 후보 확정</text>
+
+      <text x="30" y="85" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#1D2430">⚖️ 피터 린치의 선고:</text>
+      <text x="180" y="85" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">"단기 주가 출렁임과 시장 소음에 귀를 닫아라. 기업의 기본 성장 스토리가 훼손되지 않는 한 끝까지 동행하라."</text>
+      
+      <rect x="1010" y="35" width="120" height="40" rx="6" fill="#CA8A04"/>
+      <text x="1070" y="60" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">강력 보유/추가매수</text>
+    </g>
+
+    <!-- Tier 2: 70~89점 -->
+    <g transform="translate(0, 125)">
+      <rect width="1160" height="110" rx="10" fill="#DCFCE7" stroke="#86EFAC" stroke-width="1.5"/>
+      <rect width="8" height="110" fill="#16A34A" rx="4"/>
+      
+      <rect x="30" y="20" width="140" height="32" rx="6" fill="#16A34A"/>
+      <text x="100" y="42" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF" text-anchor="middle">70 ~ 89점</text>
+      <text x="190" y="44" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#166534">🛡️ 든든한 우량 방어주</text>
+
+      <text x="30" y="85" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#1D2430">⚖️ 피터 린치의 선고:</text>
+      <text x="180" y="85" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">"포트폴리오의 안정적 기둥이다. 30~50% 상승하여 적정 가치에 도달하면 다른 소외된 우량주로 교체 매매를 검토하라."</text>
+      
+      <rect x="1010" y="35" width="120" height="40" rx="6" fill="#16A34A"/>
+      <text x="1070" y="60" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">보유 &amp; 교체매매</text>
+    </g>
+
+    <!-- Tier 3: 50~69점 -->
+    <g transform="translate(0, 250)">
+      <rect width="1160" height="110" rx="10" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1.5"/>
+      <rect width="8" height="110" fill="#D97706" rx="4"/>
+      
+      <rect x="30" y="20" width="140" height="32" rx="6" fill="#D97706"/>
+      <text x="100" y="42" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF" text-anchor="middle">50 ~ 69점</text>
+      <text x="190" y="44" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#92400E">⚠️ 위험 관찰 대상 (스토리 점검)</text>
+
+      <text x="30" y="85" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#1D2430">⚖️ 피터 린치의 선고:</text>
+      <text x="180" y="85" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">"처음 매수했던 이유가 퇴색되고 있다. 분기 실적 보고서와 부채 구조, 신규 경쟁자 진입 여부를 즉각 재심사하라."</text>
+      
+      <rect x="1010" y="35" width="120" height="40" rx="6" fill="#D97706"/>
+      <text x="1070" y="60" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">비중 축소 검토</text>
+    </g>
+
+    <!-- Tier 4: 50점 미만 -->
+    <g transform="translate(0, 375)">
+      <rect width="1160" height="110" rx="10" fill="#FEE2E2" stroke="#FCA5A5" stroke-width="1.5"/>
+      <rect width="8" height="110" fill="#DC2626" rx="4"/>
+      
+      <rect x="30" y="20" width="140" height="32" rx="6" fill="#DC2626"/>
+      <text x="100" y="42" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF" text-anchor="middle">50점 미만</text>
+      <text x="190" y="44" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#991B1B">🚨 즉시 탈출 (도박 경고)</text>
+
+      <text x="30" y="85" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#1D2430">⚖️ 피터 린치의 선고:</text>
+      <text x="180" y="85" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">"당신은 투자를 한 것이 아니라 카지노 도박을 했다. 남의 말만 듣고 산 쓰레기 주식이다. 미련 없이 전량 매도하라."</text>
+      
+      <rect x="1010" y="35" width="120" height="40" rx="6" fill="#DC2626"/>
+      <text x="1070" y="60" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">즉시 전량 매도</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <!-- Top Header -->
+  <g id="header" transform="translate(60, 45)">
+    <rect x="0" y="0" width="140" height="26" rx="13" fill="#FEE2E2"/>
+    <text x="70" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#DC2626" text-anchor="middle">4심 : 뻘짓 심문</text>
+    
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="32" font-weight="800" fill="#0B2545">"사업다악화 &amp; 상투의 징후"</text>
+    <text x="0" y="94" font-family="Pretendard, sans-serif" font-size="17" font-weight="500" fill="#5A6578">본업을 벗어난 무리한 확장과 대중의 비이성적 과열 징후를 경계하라</text>
+  </g>
+
+  <!-- 3 Question Cards -->
+  <g id="questions_layout" transform="translate(60, 160)">
+    <!-- Q7 -->
+    <g transform="translate(0, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#EF4444" rx="3"/>
+      
+      <rect x="25" y="25" width="60" height="28" rx="6" fill="#EF4444"/>
+      <text x="55" y="44" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Q7</text>
+      
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#0B2545">사업다악화 경고</text>
+      <text x="25" y="110" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#EF4444">Diworsification 확인</text>
+      <line x1="25" y1="125" x2="340" y2="125" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="25" y="160" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#134074">■ 역질문 체크 (해당 시 감점):</text>
+      <text x="25" y="185" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">이 회사가 본업과 전혀 무관한 엉뚱한</text>
+      <text x="25" y="207" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">유행 기업/첨단 기술 기업을 비싼 값에</text>
+      <text x="25" y="229" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">인수합병(M&amp;A)하며 돈을 낭비하고 있는가?</text>
+
+      <rect x="20" y="260" width="325" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#DC2626">💬 피터 린치의 팩폭:</text>
+      <text x="35" y="308" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"사업다각화가 아니라 사업다악화다.</text>
+      <text x="35" y="328" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">엉뚱한 짓을 시작할 때가 매도 시점이다."</text>
+
+      <rect x="20" y="360" width="325" height="40" rx="8" fill="#0B2545"/>
+      <text x="182" y="385" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">[ ] 안함(10점) / [ ] 뻘짓중(0점)</text>
+    </g>
+
+    <!-- Q8 -->
+    <g transform="translate(397, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#EF4444" rx="3"/>
+      
+      <rect x="25" y="25" width="60" height="28" rx="6" fill="#EF4444"/>
+      <text x="55" y="44" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Q8</text>
+      
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#0B2545">부채와 현금 구조</text>
+      <text x="25" y="110" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#EF4444">자사주 매입 여력</text>
+      <line x1="25" y1="125" x2="340" y2="125" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="25" y="160" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#134074">■ 역질문 체크 (해당 시 감점):</text>
+      <text x="25" y="185" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">부채비율이 과도하게 높고, 주가가</text>
+      <text x="25" y="207" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">떨어져도 회사에 자사주를 매입할</text>
+      <text x="25" y="229" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">순현금 자산이 부족한 상태인가?</text>
+
+      <rect x="20" y="260" width="325" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#DC2626">💬 피터 린치의 팩폭:</text>
+      <text x="35" y="308" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"부채가 없는 회사는 절대 망하지 않는다.</text>
+      <text x="35" y="328" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">주당 순현금은 주가의 강력한 바닥이다."</text>
+
+      <rect x="20" y="360" width="325" height="40" rx="8" fill="#0B2545"/>
+      <text x="182" y="385" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">[ ] 현금풍부(10점) / [ ] 부채위험(0점)</text>
+    </g>
+
+    <!-- Q9 -->
+    <g transform="translate(795, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#EF4444" rx="3"/>
+      
+      <rect x="25" y="25" width="60" height="28" rx="6" fill="#EF4444"/>
+      <text x="55" y="44" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Q9</text>
+      
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#0B2545">치과의사 추천 (상투)</text>
+      <text x="25" y="110" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#EF4444">칵테일 파티 4단계</text>
+      <line x1="25" y1="125" x2="340" y2="125" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="25" y="160" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#134074">■ 역질문 체크 (해당 시 감점):</text>
+      <text x="25" y="185" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">주식을 평소에 안 하던 지인이나 치과의사,</text>
+      <text x="25" y="207" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">친척이 나에게 "이 종목 대박 난다"며</text>
+      <text x="25" y="229" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">너도나도 추천해서 매수했는가?</text>
+
+      <rect x="20" y="260" width="325" height="85" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#DC2626">💬 피터 린치의 팩폭:</text>
+      <text x="35" y="308" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"치과의사가 종목을 추천하기 시작하면</text>
+      <text x="35" y="328" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">그 파티는 끝난 것이다. 상투 경고 신호다."</text>
+
+      <rect x="20" y="360" width="325" height="40" rx="8" fill="#0B2545"/>
+      <text x="182" y="385" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">[ ] 본인발굴(10점) / [ ] 남추천(0점)</text>
+    </g>
+  </g>
+
+  <!-- Bottom Indicator -->
+  <g id="bottom_indicator" transform="translate(60, 610)">
+    <rect width="1160" height="50" rx="8" fill="#0B2545"/>
+    <text x="40" y="31" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">4심 총점 : _____ / 30점  (뻘짓 징후가 발견되면 즉시 탈출을 고려하십시오)</text>
+  </g>
+</svg>

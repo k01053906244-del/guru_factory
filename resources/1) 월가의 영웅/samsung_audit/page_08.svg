@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <g id="header" transform="translate(60, 35)">
+    <rect x="0" y="0" width="150" height="26" rx="13" fill="#0B2545"/>
+    <text x="75" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#E5C158" text-anchor="middle">진단 완료 채점표</text>
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="30" font-weight="800" fill="#0B2545">삼성전자 종목 청문회 실전 채점표 (완료본)</text>
+    <text x="0" y="88" font-family="Pretendard, sans-serif" font-size="15" font-weight="500" fill="#5A6578">피터 린치 10대 심문 항목별 실제 점수 및 평가 근거</text>
+  </g>
+
+  <g id="user_inputs" transform="translate(60, 130)">
+    <rect width="1160" height="50" rx="8" fill="#F4F6F9" stroke="#0B2545" stroke-width="1.5"/>
+    <text x="25" y="31" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#0B2545">진단 대상 :</text>
+    <text x="105" y="31" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#134074">삼성전자 (005930)</text>
+
+    <text x="350" y="31" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#0B2545">1심 확정 유형 :</text>
+    <text x="465" y="31" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#134074">대형우량주 (Stalwarts)</text>
+
+    <text x="750" y="31" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#0B2545">최종 청문회 총점 :</text>
+    <text x="890" y="31" font-family="Pretendard, sans-serif" font-size="17" font-weight="800" fill="#C59B27">85점 / 100점 (🛡️ 우량방어)</text>
+  </g>
+
+  <g id="table_matrix" transform="translate(60, 195)">
+    <rect width="1160" height="32" rx="4" fill="#0B2545"/>
+    <text x="30" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">구분</text>
+    <text x="100" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">심문 항목</text>
+    <text x="360" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">삼성전자 실제 팩트 및 근거</text>
+    <text x="960" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">배점</text>
+    <text x="1060" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">획득 점수</text>
+
+    <g transform="translate(0, 35)">
+      <rect width="1160" height="32" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#0B2545">2심</text>
+      <text x="100" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#1D2430">Q1. 크레용 테스트</text>
+      <text x="360" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">스마트폰, 가전, 메모리 반도체 제조 판매 (사업 이해도 명확)</text>
+      <text x="965" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#5A6578">10점</text>
+      <text x="1075" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#10B981">10점 만점</text>
+    </g>
+
+    <g transform="translate(0, 69)">
+      <rect width="1160" height="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#0B2545">2심</text>
+      <text x="100" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#1D2430">Q2. 현장 관찰 우위</text>
+      <text x="360" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">갤럭시폰, TV, 가전 등 일상 속 독보적 점유율 직접 목격</text>
+      <text x="965" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#5A6578">10점</text>
+      <text x="1075" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#10B981">10점 만점</text>
+    </g>
+
+    <g transform="translate(0, 103)">
+      <rect width="1160" height="32" fill="#FEE2E2" stroke="#FCA5A5" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#DC2626">2심</text>
+      <text x="100" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#DC2626">Q3. 소외 선점 여부</text>
+      <text x="360" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#DC2626">국민 500만 명 보유 국민주, 매일 언론 도배 (소외 프리미엄 0)</text>
+      <text x="965" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#5A6578">10점</text>
+      <text x="1075" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#DC2626">0점 감점</text>
+    </g>
+
+    <g transform="translate(0, 137)">
+      <rect width="1160" height="32" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#0B2545">3심</text>
+      <text x="100" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#1D2430">Q4. 성공 공식 복제</text>
+      <text x="360" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">평택/화성 팹 양산 기술을 미국/글로벌 팹으로 성공적 복제</text>
+      <text x="965" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#5A6578">10점</text>
+      <text x="1075" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#10B981">10점 만점</text>
+    </g>
+
+    <g transform="translate(0, 171)">
+      <rect width="1160" height="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#0B2545">3심</text>
+      <text x="100" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#1D2430">Q5. PEG 비율 검증</text>
+      <text x="360" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">선행 PER 13배 ÷ 예상 이익성장률 15% = PEG 0.86 (저평가)</text>
+      <text x="965" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#5A6578">10점</text>
+      <text x="1075" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#10B981">10점 만점</text>
+    </g>
+
+    <g transform="translate(0, 205)">
+      <rect width="1160" height="32" fill="#FEF9C3" stroke="#FDE047" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#854D0E">3심</text>
+      <text x="100" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#854D0E">Q6. 기관/외인 지분</text>
+      <text x="360" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#854D0E">외인 지분율 54%로 기관 포화 상태 (신규 수급 폭발력 제한)</text>
+      <text x="965" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#5A6578">10점</text>
+      <text x="1075" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#D97706">5점 부분</text>
+    </g>
+
+    <g transform="translate(0, 239)">
+      <rect width="1160" height="32" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#0B2545">4심</text>
+      <text x="100" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#1D2430">Q7. 사업다악화 부재</text>
+      <text x="360" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">본업과 무관한 M&amp;A 낭비 없음, 반도체 본업 R&amp;D 집중</text>
+      <text x="965" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#5A6578">10점</text>
+      <text x="1075" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#10B981">10점 만점</text>
+    </g>
+
+    <g transform="translate(0, 273)">
+      <rect width="1160" height="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#0B2545">4심</text>
+      <text x="100" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#1D2430">Q8. 순현금 건전성</text>
+      <text x="360" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">순현금 약 100조 원 보유, 부채비율 25% 미만 (세계 최고 안전성)</text>
+      <text x="965" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#5A6578">10점</text>
+      <text x="1075" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#10B981">10점 만점</text>
+    </g>
+
+    <g transform="translate(0, 307)">
+      <rect width="1160" height="32" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#0B2545">4심</text>
+      <text x="100" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#1D2430">Q9. 대중 과열 진정</text>
+      <text x="360" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">9만전자 광풍 소멸, 비관론 우세한 칵테일 파티 1단계 침체기</text>
+      <text x="965" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#5A6578">10점</text>
+      <text x="1075" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#10B981">10점 만점</text>
+    </g>
+
+    <g transform="translate(0, 341)">
+      <rect width="1160" height="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#0B2545">5심</text>
+      <text x="100" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#1D2430">Q10. 폭락장 감내력</text>
+      <text x="360" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">3년 이상 여유 자금 투입, -30% 폭락 시 추가 분할 매수 원칙</text>
+      <text x="965" y="21" font-family="Pretendard, sans-serif" font-size="12" font-weight="600" fill="#5A6578">10점</text>
+      <text x="1075" y="21" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#10B981">10점 만점</text>
+    </g>
+  </g>
+
+  <g id="bottom_verdict" transform="translate(60, 585)">
+    <rect width="1160" height="95" rx="8" fill="#0B2545"/>
+    <rect x="0" y="0" width="8" height="95" fill="#C59B27" rx="4"/>
+    <text x="30" y="38" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#E5C158">피터 린치의 최종 선고 요약 :</text>
+    <text x="260" y="40" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF">총점 85점 (🛡️ 든든한 우량 방어주)</text>
+    <text x="30" y="72" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#8E9AA8">"안전마진이 확보된 우량주이므로 매도할 필요 없이 보유(Hold)하고, 30~50% 반등 시 다른 저평가 소외주로 교체 매매를 추천합니다."</text>
+  </g>
+</svg>

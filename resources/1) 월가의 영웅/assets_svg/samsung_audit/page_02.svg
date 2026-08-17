@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <g id="header" transform="translate(60, 45)">
+    <rect x="0" y="0" width="140" height="26" rx="13" fill="#F4F6F9"/>
+    <text x="70" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#C59B27" text-anchor="middle">1심 : 신분 심문</text>
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="32" font-weight="800" fill="#0B2545">삼성전자의 신분 확정 : "대형우량주(Stalwarts) + 경기순환 혼합형"</text>
+    <text x="0" y="94" font-family="Pretendard, sans-serif" font-size="17" font-weight="500" fill="#5A6578">삼성전자는 10배를 바라는 고성장주가 아니다. 포트폴리오를 지키는 든든한 방패다.</text>
+  </g>
+
+  <g id="content_boxes" transform="translate(60, 160)">
+    <g transform="translate(0, 0)">
+      <rect width="565" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="565" height="6" fill="#0B2545" rx="3"/>
+      <text x="30" y="45" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#0B2545">판정: 대형우량주 (Stalwarts)</text>
+      <text x="30" y="75" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#C59B27">연평균 기대수익률: 10~15% (배당 포함)</text>
+      <line x1="30" y1="95" x2="535" y2="95" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="30" y="135" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#134074">■ 왜 대형우량주인가?</text>
+      <text x="30" y="165" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">• 글로벌 D램/NAND 플래시 시장 점유율 1위 독점력</text>
+      <text x="30" y="195" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">• 시가총액 400조 원 규모로 10배 폭발 성장은 물리적으로 불가</text>
+      <text x="30" y="225" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">• 불황에도 망하지 않고 살아남아 시장 점유율을 흡수하는 방패</text>
+
+      <rect x="30" y="270" width="505" height="110" rx="8" fill="#FFFFFF" stroke="#0B2545" stroke-width="1.5"/>
+      <text x="45" y="300" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#0B2545">💬 피터 린치의 평가:</text>
+      <text x="45" y="330" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#5A6578">"대형우량주를 사놓고 10루타를 기대하는 것은 착각이다.</text>
+      <text x="45" y="355" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#5A6578">이 주식은 30~50% 수익이 나면 팔아서 소외된 다른 주식으로 갈아타야 한다."</text>
+    </g>
+
+    <g transform="translate(595, 0)">
+      <rect width="565" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="565" height="6" fill="#C59B27" rx="3"/>
+      <text x="30" y="45" font-family="Pretendard, sans-serif" font-size="22" font-weight="800" fill="#0B2545">보조 성격: 경기순환 사이클</text>
+      <text x="30" y="75" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#C59B27">반도체 다운사이클 바닥 통과 중</text>
+      <line x1="30" y1="95" x2="535" y2="95" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="30" y="135" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#134074">■ 매매 타이밍 원칙</text>
+      <text x="30" y="165" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">• 반도체 사이클상 적자/감산 뉴스가 쏟아질 때가 바닥 매수 기회</text>
+      <text x="30" y="195" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">• 사상 최대 실적 경신 뉴스와 온 국민 환호 시점이 상투 매도 신호</text>
+      <text x="30" y="225" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">• 현재 시점: HBM 우려 등으로 주가가 눌려있는 회복기 초입</text>
+
+      <rect x="30" y="270" width="505" height="110" rx="8" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5"/>
+      <text x="45" y="300" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#166534">⚖️ 1심 최종 판결:</text>
+      <text x="45" y="330" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#1D2430">"신분: 대형우량주 | 배정 포트폴리오 비중: 20~30% 적합"</text>
+      <text x="45" y="355" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#5A6578">안정적인 하방 지지력을 바탕으로 다음 2심(상식 심문)으로 회부함.</text>
+    </g>
+  </g>
+</svg>

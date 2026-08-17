@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C59B27"/>
+      <stop offset="100%" stop-color="#E5C158"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <!-- Top Header -->
+  <g id="header" transform="translate(60, 45)">
+    <rect x="0" y="0" width="155" height="26" rx="13" fill="#F4F6F9"/>
+    <text x="77" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#C59B27" text-anchor="middle">PART 1. 투자 자격 진단</text>
+    
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="34" font-weight="800" fill="#0B2545">주식 매수 전 반드시 통과해야 할 3가지 자격 질문</text>
+    <text x="0" y="94" font-family="Pretendard, sans-serif" font-size="18" font-weight="500" fill="#5A6578">투자를 시작하기 전 자신의 재정 상태와 심리적 자질을 객관적으로 점검해야 한다</text>
+  </g>
+
+  <!-- 3 Stage Questions Layout -->
+  <g id="questions_layout" transform="translate(60, 175)">
+    <!-- Stage 1 -->
+    <g id="q1_card" transform="translate(0, 0)">
+      <rect width="365" height="395" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="8" fill="#0B2545" rx="4"/>
+      
+      <rect x="25" y="30" width="90" height="30" rx="6" fill="#0B2545"/>
+      <text x="70" y="51" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#E5C158" text-anchor="middle">CHECK 1</text>
+      
+      <text x="25" y="98" font-family="Pretendard, sans-serif" font-size="24" font-weight="800" fill="#0B2545">내 집이 있는가?</text>
+      <text x="25" y="125" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#C59B27">부동산이 주식보다 먼저다</text>
+      
+      <line x1="25" y1="145" x2="340" y2="145" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="25" y="180" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#134074">■ 심리적 안전판 확보</text>
+      <text x="25" y="206" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">내 집이 주는 주거 안정성이 있어야만</text>
+      <text x="25" y="228" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">주식 시장의 급락에도 버틸 수 있음</text>
+
+      <text x="25" y="275" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#134074">■ 훌륭한 레버리지 투자</text>
+      <text x="25" y="301" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">집값은 매일 시세를 확인하지 않으므로</text>
+      <text x="25" y="323" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">공포에 의한 뇌동매매를 하지 않음</text>
+
+      <rect x="20" y="348" width="325" height="32" rx="6" fill="#E2E8F0"/>
+      <text x="182" y="369" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#1D2430" text-anchor="middle">부동산 성공 경험이 주식 성공의 밑거름</text>
+    </g>
+
+    <!-- Stage 2 -->
+    <g id="q2_card" transform="translate(397, 0)">
+      <rect width="365" height="395" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="8" fill="#C59B27" rx="4"/>
+      
+      <rect x="25" y="30" width="90" height="30" rx="6" fill="#C59B27"/>
+      <text x="70" y="51" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#0B2545" text-anchor="middle">CHECK 2</text>
+      
+      <text x="25" y="98" font-family="Pretendard, sans-serif" font-size="24" font-weight="800" fill="#0B2545">곧 필요한 돈인가?</text>
+      <text x="25" y="125" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#C59B27">시간적 여유가 있는 여유 자금</text>
+      
+      <line x1="25" y1="145" x2="340" y2="145" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="25" y="180" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#134074">■ 강제 매도의 위험</text>
+      <text x="25" y="206" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">자녀 학자금, 결혼 자금, 전세금 등</text>
+      <text x="25" y="228" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">2~3년 내 써야 할 돈은 주식 투자 금지</text>
+
+      <text x="25" y="275" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#134074">■ 시간의 우위 활용</text>
+      <text x="25" y="301" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">주식 시장은 결국 우상향하지만</text>
+      <text x="25" y="323" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">단기 예측은 불가능하여 손실 확정 위험</text>
+
+      <rect x="20" y="348" width="325" height="32" rx="6" fill="#FEE2E2"/>
+      <text x="182" y="369" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#DC2626" text-anchor="middle">급하게 필요한 돈은 공포장에서 최악의 매도 유발</text>
+    </g>
+
+    <!-- Stage 3 -->
+    <g id="q3_card" transform="translate(795, 0)">
+      <rect width="365" height="395" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="8" fill="#134074" rx="4"/>
+      
+      <rect x="25" y="30" width="90" height="30" rx="6" fill="#134074"/>
+      <text x="70" y="51" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">CHECK 3</text>
+      
+      <text x="25" y="98" font-family="Pretendard, sans-serif" font-size="24" font-weight="800" fill="#0B2545">성공할 자질이 있는가?</text>
+      <text x="25" y="125" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#C59B27">배짱과 독립적 사고방식</text>
+      
+      <line x1="25" y1="145" x2="340" y2="145" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="25" y="180" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#134074">■ 필수 심리적 역량</text>
+      <text x="25" y="206" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">인내심, 자신감, 상식, 고통에 대한 내성,</text>
+      <text x="25" y="228" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">군중 심리에 휩쓸리지 않는 독립심</text>
+
+      <text x="25" y="275" font-family="Pretendard, sans-serif" font-size="16" font-weight="700" fill="#134074">■ 지능보다 성품이 중요</text>
+      <text x="25" y="301" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">주식 투자에 필요한 것은 수학적 천재성이</text>
+      <text x="25" y="323" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#1D2430">아닌 공포를 견디는 강한 위장(배짱)</text>
+
+      <rect x="20" y="348" width="325" height="32" rx="6" fill="#DCFCE7"/>
+      <text x="182" y="369" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#15803D" text-anchor="middle">"주식 투자의 성패는 머리가 아닌 배짱에 달렸다"</text>
+    </g>
+  </g>
+
+  <!-- Bottom Indicator -->
+  <g id="bottom_indicator" transform="translate(60, 595)">
+    <rect width="1160" height="60" rx="8" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="30" y="36" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#0B2545">💡 피터 린치의 결론:</text>
+    <text x="180" y="36" font-family="Pretendard, sans-serif" font-size="15" font-weight="500" fill="#1D2430">이 3가지 질문에 확실하게 YES라고 답할 수 있을 때만 주식 시장에 진입하라.</text>
+  </g>
+</svg>

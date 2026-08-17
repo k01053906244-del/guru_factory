@@ -1,0 +1,88 @@
+﻿{
+  "version": "1.0.0",
+  "guru_id": "warren_buffett",
+  "guru_name_ko": "워런 버핏",
+  "guru_name_en": "Warren Buffett",
+  "tier_status": "PAID_VIP",
+  "core_philosophy": "절대 잃지 않는 투자와 10년 경제적 해자(Economic Moat) 철학",
+  "categories": [
+    { "id": "monopoly_moat", "name": "독점적 해자 기업", "growth_rate": "15~20%", "purpose": "장기 복리 극대화" },
+    { "id": "toll_bridge", "name": "통행료 징수 모델", "growth_rate": "10~15%", "purpose": "현금 창출 머신" },
+    { "id": "brand_loyalty", "name": "압도적 소비자 독점", "growth_rate": "8~12%", "purpose": "가격 결정권 방어" }
+  ],
+  "hearing_questions": [
+    {
+      "id": "WB01",
+      "phase": 2,
+      "title": "가격 결정권 (Pricing Power)",
+      "type": "qualitative",
+      "weight": 10,
+      "question": "가격을 10% 올려도 고객 이탈 없이 그대로 구매하는 브랜드 파워가 있는가?",
+      "quote": "가격을 올릴 수 있는 능력이야말로 훌륭한 비즈니스의 가장 확실한 신호다."
+    },
+    {
+      "id": "WB02",
+      "phase": 2,
+      "title": "10년 보유 확신",
+      "type": "qualitative",
+      "weight": 10,
+      "question": "향후 10년간 주식 시장이 문을 닫아도 편안하게 보유할 확신이 있는가?",
+      "quote": "10년 동안 보유할 생각이 없다면, 단 10분도 보유하지 마라."
+    },
+    {
+      "id": "WB03",
+      "phase": 3,
+      "title": "10년 평균 ROE 15% 이상",
+      "type": "quantitative",
+      "metric": "roe",
+      "benchmark": ">= 15.0%",
+      "weight": 10,
+      "question": "과도한 부채 없이 자기자본이익률(ROE)이 15% 이상 꾸준히 유지되는가?",
+      "quote": "자본을 얼마나 효율적으로 굴려 복리로 불리는가가 기업의 품격이다."
+    },
+    {
+      "id": "WB04",
+      "phase": 3,
+      "title": "유능하고 정직한 경영진",
+      "type": "qualitative",
+      "weight": 10,
+      "question": "경영진이 주주 친화적이며 이익을 헛된 곳에 낭비하지 않고 자사주를 소각하는가?",
+      "quote": "정직하고 유능한 경영진이 이끄는 훌륭한 기업을 적정 가격에 사라."
+    },
+    {
+      "id": "WB05",
+      "phase": 4,
+      "title": "단순하고 이해하기 쉬운 능력 범위",
+      "type": "qualitative",
+      "weight": 10,
+      "question": "당신의 능력 범위(Circle of Competence) 안에서 사업 모델을 100% 이해하는가?",
+      "quote": "모든 것을 알 필요는 없다. 내가 잘 아는 확실한 몇 가지만 알면 된다."
+    }
+  ],
+  "verdict_matrix": [
+    {
+      "min_score": 40,
+      "max_score": 50,
+      "tier": "버크셔 포트폴리오급 해자 기업",
+      "badge": "👑",
+      "action": "평생 동행 및 배당/복리 재투자",
+      "verdict_text": "절대 팔지 마라. 이 기업은 당신의 자손에게 물려줄 수 있는 완벽한 경제적 해자(Castle)를 가졌다."
+    },
+    {
+      "min_score": 30,
+      "max_score": 39,
+      "tier": "준수한 가치주",
+      "badge": "🏰",
+      "action": "안전마진 확보 시 매수",
+      "verdict_text": "해자는 준수하나 가격이 다소 비쌀 수 있다. 시장의 비이성적 폭락 때 안전마진을 확보하라."
+    },
+    {
+      "min_score": 0,
+      "max_score": 29,
+      "tier": "해자 없는 범용 비즈니스",
+      "badge": "🚫",
+      "action": "매수 금지 및 관심 제외",
+      "verdict_text": "가격 경쟁에 치여 자본을 갉아먹는 기업이다. 버핏은 단 1초도 쳐다보지 않는다."
+    }
+  ]
+}

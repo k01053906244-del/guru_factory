@@ -1,0 +1,177 @@
+{
+  "version": "1.0.0",
+  "guru_id": "peter_lynch",
+  "guru_name_ko": "피터 린치",
+  "guru_name_en": "Peter Lynch",
+  "core_philosophy": "상식으로 발굴하는 10루타(Ten-Bagger) 투자 철학",
+  "categories": [
+    {
+      "id": "slow_grower",
+      "name": "저성장주",
+      "growth_rate": "2~4%",
+      "purpose": "배당 수익"
+    },
+    {
+      "id": "stalwart",
+      "name": "대형우량주",
+      "growth_rate": "10~12%",
+      "purpose": "방어 및 30~50% 차익"
+    },
+    {
+      "id": "cyclical",
+      "name": "경기순환주",
+      "growth_rate": "사이클 의존",
+      "purpose": "바닥 매수 타이밍"
+    },
+    {
+      "id": "fast_grower",
+      "name": "고성장주",
+      "growth_rate": "20~25%",
+      "purpose": "10루타 대박"
+    },
+    {
+      "id": "turnaround",
+      "name": "회생주",
+      "growth_rate": "턴어라운드",
+      "purpose": "구조조정 반등"
+    },
+    {
+      "id": "asset_play",
+      "name": "자산주",
+      "growth_rate": "자산재평가",
+      "purpose": "숨겨진 자산 가치"
+    }
+  ],
+  "hearing_questions": [
+    {
+      "id": "Q01",
+      "phase": 2,
+      "title": "크레용 테스트",
+      "type": "qualitative",
+      "weight": 10,
+      "question": "초등학생에게 2분 안에 사업 구조를 그림으로 쉽게 설명 가능한가?",
+      "quote": "어린아이에게 설명할 수 없는 복잡한 사업은 사지 마라."
+    },
+    {
+      "id": "Q02",
+      "phase": 2,
+      "title": "현장 관찰 우위",
+      "type": "qualitative",
+      "weight": 10,
+      "question": "본인/가족/동료가 열광하며 매장에 줄 서는 모습을 직접 목격했는가?",
+      "quote": "사모님이 열광한 던킨도너츠와 레그스는 전문가보다 1년 먼저 발견되었다."
+    },
+    {
+      "id": "Q03",
+      "phase": 2,
+      "title": "소외주 선점 여부",
+      "type": "qualitative",
+      "weight": 10,
+      "question": "신문 1면과 유튜브에 도배되기 전 소외될 때 먼저 발굴했는가?",
+      "quote": "모두가 칭찬하는 유명한 주식은 이미 비싸다. 따분한 곳에 기회가 있다."
+    },
+    {
+      "id": "Q04",
+      "phase": 3,
+      "title": "성공 공식 복제력",
+      "type": "qualitative",
+      "weight": 10,
+      "question": "한 매장의 성공 공식을 전국/글로벌로 똑같이 복제 확장 가능한가?",
+      "quote": "월마트는 작은 시골 마을을 복제하며 전국으로 뻗어나가 100배 주식이 되었다."
+    },
+    {
+      "id": "Q05",
+      "phase": 3,
+      "title": "PEG 비율 검증",
+      "type": "quantitative",
+      "metric": "peg_ratio",
+      "benchmark": "<= 1.0",
+      "weight": 10,
+      "question": "PER을 연간 이익성장률로 나눈 PEG가 1.0 이하로 저평가인가? (2.0 초과는 경계)",
+      "quote": "성장률 20% 기업의 PER이 40이면 비싸다. PER은 성장률과 비슷하거나 낮아야 한다."
+    },
+    {
+      "id": "Q06",
+      "phase": 3,
+      "title": "기관 미보유 프리미엄",
+      "type": "quantitative",
+      "metric": "institutional_ownership",
+      "benchmark": "<= 30%",
+      "weight": 10,
+      "question": "기관투자자 비중이 낮고 애널리스트 분석이 적어 유입 여력이 큰가?",
+      "quote": "기관이 가득 찬 종목은 팔 사람만 남았다. 기관이 없을 때 사라."
+    },
+    {
+      "id": "Q07",
+      "phase": 4,
+      "title": "사업다악화(Diworsification) 부재",
+      "type": "qualitative",
+      "weight": 10,
+      "question": "본업과 무관한 엉뚱한 기업을 비싸게 인수합병(M&A)하며 돈을 낭비하지 않는가?",
+      "quote": "사업다각화가 아니라 사업다악화다. 엉뚱한 짓을 시작할 때가 매도 시점이다."
+    },
+    {
+      "id": "Q08",
+      "phase": 4,
+      "title": "재무 건전성 & 순현금",
+      "type": "quantitative",
+      "metric": "debt_to_equity",
+      "benchmark": "<= 50%",
+      "weight": 10,
+      "question": "과도한 부채가 없고 주가 폭락 시 자사주를 살 순현금이 풍부한가?",
+      "quote": "부채가 없는 회사는 절대 망하지 않는다. 순현금은 강력한 바닥이다."
+    },
+    {
+      "id": "Q09",
+      "phase": 5,
+      "title": "폭락장 감내력",
+      "type": "qualitative",
+      "weight": 10,
+      "question": "내일 당장 주가가 -30% 폭락해도 공포 없이 추가 매수할 확신이 있는가?",
+      "quote": "좋은 주식이 세일할 땐 왜 공포에 떨며 파는가? 바겐세일로 즐겨라."
+    },
+    {
+      "id": "Q10",
+      "phase": 5,
+      "title": "시간의 여유 (순수 여유자금)",
+      "type": "qualitative",
+      "weight": 10,
+      "question": "향후 3년 이상 전혀 쓸 일 없는 순수한 여유 자금으로 매수했는가?",
+      "quote": "시간에 쫓기는 돈으로 투자하면 가장 최악의 바닥에서 주식을 팔게 된다."
+    }
+  ],
+  "verdict_matrix": [
+    {
+      "min_score": 90,
+      "max_score": 100,
+      "tier": "10루타 후보 확정",
+      "badge": "💎",
+      "action": "강력 보유 / 추가 매수",
+      "verdict_text": "단기 주가 출렁임과 시장 소음에 귀를 닫아라. 기업의 기본 성장 스토리가 훼손되지 않는 한 끝까지 동행하라."
+    },
+    {
+      "min_score": 70,
+      "max_score": 89,
+      "tier": "든든한 우량 방어주",
+      "badge": "🛡️",
+      "action": "보유 & 적정가 도달 시 교체 매매",
+      "verdict_text": "포트폴리오의 안정적 기둥이다. 30~50% 상승하여 적정 가치에 도달하면 다른 소외된 우량주로 교체 매매를 검토하라."
+    },
+    {
+      "min_score": 50,
+      "max_score": 69,
+      "tier": "위험 관찰 대상 (스토리 점검)",
+      "badge": "⚠️",
+      "action": "비중 축소 및 펀더멘털 재검토",
+      "verdict_text": "처음 매수했던 이유가 퇴색되고 있다. 분기 실적 보고서와 부채 구조, 신규 경쟁자 진입 여부를 즉각 재심사하라."
+    },
+    {
+      "min_score": 0,
+      "max_score": 49,
+      "tier": "즉시 탈출 (도박 경고)",
+      "badge": "🚨",
+      "action": "미련 없이 즉시 전량 매도",
+      "verdict_text": "당신은 투자를 한 것이 아니라 카지노 도박을 했다. 남의 말만 듣고 산 쓰레기 주식이다. 당장 전량 매도하라."
+    }
+  ]
+}

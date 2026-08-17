@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B2545"/>
+      <stop offset="100%" stop-color="#061324"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C59B27"/>
+      <stop offset="100%" stop-color="#E5C158"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="12" height="720" fill="url(#goldGrad)"/>
+
+  <!-- Decorative Courtroom/Gavel geometry -->
+  <circle cx="1150" cy="120" r="300" fill="#134074" opacity="0.12"/>
+  <circle cx="1150" cy="120" r="200" fill="#C59B27" opacity="0.08"/>
+
+  <!-- Content Container -->
+  <g id="cover_content" transform="translate(100, 130)">
+    <!-- Badge -->
+    <rect x="0" y="0" width="260" height="36" rx="18" fill="#134074"/>
+    <text x="130" y="23" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#E5C158" text-anchor="middle">TIER 2. 실전 진단 워크북</text>
+
+    <!-- Main Title -->
+    <text x="0" y="110" font-family="Pretendard, sans-serif" font-size="58" font-weight="800" fill="#FFFFFF" letter-spacing="-1">피터 린치의 종목 청문회</text>
+
+    <!-- Gold Accent Line -->
+    <rect x="0" y="145" width="80" height="6" fill="url(#goldGrad)" rx="3"/>
+
+    <!-- Subtitle -->
+    <text x="0" y="200" font-family="Pretendard, sans-serif" font-size="28" font-weight="600" fill="#F4F6F9">"당신의 종목은 피터 린치 앞에서 살아남을 수 있는가?"</text>
+
+    <!-- Hook Box -->
+    <rect x="0" y="245" width="760" height="95" rx="12" fill="#134074" opacity="0.6"/>
+    <rect x="0" y="245" width="6" height="95" fill="#C59B27" rx="3"/>
+    <text x="30" y="285" font-family="Pretendard, sans-serif" font-size="19" font-weight="600" fill="#FFFFFF">12가지 무자비한 심문 질문과 4단계 최종 선고 매트릭스</text>
+    <text x="30" y="318" font-family="Pretendard, sans-serif" font-size="15" font-weight="400" fill="#8E9AA8">내 보유 종목의 민낯을 마주하고 매수·보유·손절을 판정하는 10분 실전 워크북</text>
+
+    <!-- Meta Info -->
+    <g transform="translate(0, 420)">
+      <text x="0" y="0" font-family="Pretendard, sans-serif" font-size="15" font-weight="500" fill="#8E9AA8">피터 린치(Peter Lynch) 원칙 기반 종목 진단 시스템</text>
+      <text x="0" y="25" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#5A6578">투자구루를 만나기 위한 여정 | 실전 진단 가이드</text>
+    </g>
+  </g>
+
+  <!-- Right Visual Verdict Card -->
+  <g id="right_card" transform="translate(900, 200)">
+    <rect width="280" height="380" rx="14" fill="#134074" opacity="0.4" stroke="#1E4D82" stroke-width="1"/>
+    
+    <text x="30" y="50" font-family="Pretendard, sans-serif" font-size="18" font-weight="700" fill="#E5C158">청문회 진행 순서</text>
+    <line x1="30" y1="70" x2="250" y2="70" stroke="#1E4D82" stroke-width="1"/>
+
+    <text x="30" y="110" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">1심. 신분 심문 (6대 유형)</text>
+    <text x="30" y="155" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">2심. 상식 심문 (크레용 테스트)</text>
+    <text x="30" y="200" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">3심. 재무 심문 (복제력 &amp; PEG)</text>
+    <text x="30" y="245" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">4심. 뻘짓 심문 (사업다악화)</text>
+    <text x="30" y="290" font-family="Pretendard, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">5심. 멘탈 심문 (폭락장 배짱)</text>
+
+    <rect x="25" y="320" width="230" height="40" rx="8" fill="url(#goldGrad)"/>
+    <text x="140" y="345" font-family="Pretendard, sans-serif" font-size="15" font-weight="800" fill="#0B2545" text-anchor="middle">최종 판결 &amp; 채점 ➔</text>
+  </g>
+</svg>

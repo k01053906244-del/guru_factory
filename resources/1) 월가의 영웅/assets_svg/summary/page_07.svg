@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C59B27"/>
+      <stop offset="100%" stop-color="#E5C158"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <!-- Top Header -->
+  <g id="header" transform="translate(60, 45)">
+    <rect x="0" y="0" width="165" height="26" rx="13" fill="#F4F6F9"/>
+    <text x="82" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#C59B27" text-anchor="middle">PART 3. 포트폴리오 및 매매</text>
+    
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="34" font-weight="800" fill="#0B2545">이기는 포트폴리오 운용과 현명한 매수/매도 원칙</text>
+    <text x="0" y="94" font-family="Pretendard, sans-serif" font-size="18" font-weight="500" fill="#5A6578">주가 변동에 뇌동매매하지 말고, 회사의 펀더멘털 스토리가 유효한 한 계속 보유하라</text>
+  </g>
+
+  <!-- 3 Pillars Layout -->
+  <g id="pillars" transform="translate(60, 160)">
+    <!-- Pillar 1: 포트폴리오 배분 -->
+    <g id="p1" transform="translate(0, 0)">
+      <rect width="365" height="495" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#0B2545" rx="3"/>
+
+      <text x="25" y="45" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#0B2545">1. 최적 자산 배분 모델</text>
+      <text x="25" y="70" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#C59B27">수익과 안정성의 황금 비율</text>
+      <line x1="25" y1="88" x2="340" y2="88" stroke="#E2E8F0" stroke-width="1"/>
+
+      <!-- Distribution Bars -->
+      <g transform="translate(25, 110)">
+        <rect x="0" y="0" width="315" height="42" rx="6" fill="#0B2545"/>
+        <text x="15" y="26" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">고성장주: 30 ~ 40%</text>
+        <text x="240" y="26" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#E5C158">10루타 주력</text>
+
+        <rect x="0" y="52" width="315" height="42" rx="6" fill="#134074"/>
+        <text x="15" y="78" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">대형우량주: 10 ~ 20%</text>
+        <text x="240" y="78" font-family="Pretendard, sans-serif" font-size="13" font-weight="500" fill="#8E9AA8">방어 및 안정</text>
+
+        <rect x="0" y="104" width="315" height="42" rx="6" fill="#1E4D82"/>
+        <text x="15" y="130" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">경기순환주: 10 ~ 20%</text>
+        <text x="240" y="130" font-family="Pretendard, sans-serif" font-size="13" font-weight="500" fill="#8E9AA8">사이클 기회</text>
+
+        <rect x="0" y="156" width="315" height="42" rx="6" fill="#64748B"/>
+        <text x="15" y="182" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">회생주 및 기타: 나머지</text>
+        <text x="240" y="182" font-family="Pretendard, sans-serif" font-size="13" font-weight="500" fill="#E2E8F0">초과 수익</text>
+      </g>
+
+      <g transform="translate(25, 335)">
+        <text x="0" y="20" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#0B2545">• 종목 수 원칙:</text>
+        <text x="0" y="45" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">개인은 자신이 완벽히 파악할 수 있는</text>
+        <text x="0" y="65" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">3~10개 종목에 집중하는 것이 가장 이상적</text>
+      </g>
+    </g>
+
+    <!-- Pillar 2: 기계적 손절매 반대 -->
+    <g id="p2" transform="translate(397, 0)">
+      <rect width="365" height="495" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#EF4444" rx="3"/>
+
+      <text x="25" y="45" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#0B2545">2. 기계적 손절매의 함정</text>
+      <text x="25" y="70" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#EF4444">-10% 기계적 손절매 반대</text>
+      <line x1="25" y1="88" x2="340" y2="88" stroke="#E2E8F0" stroke-width="1"/>
+
+      <g transform="translate(25, 110)">
+        <rect x="0" y="0" width="315" height="95" rx="8" fill="#FEE2E2" stroke="#FCA5A5" stroke-width="1"/>
+        <text x="15" y="32" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#991B1B">⚠️ 손절매는 손실을 확정짓는 행위</text>
+        <text x="15" y="58" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#7F1D1D">"10% 손절매 주문을 걸어두면,</text>
+        <text x="15" y="78" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#7F1D1D">반드시 10% 손실을 보게 될 것이다."</text>
+
+        <text x="0" y="130" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#134074">• 주가 변동 vs 기업 가치</text>
+        <text x="0" y="155" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">기업의 펀더멘털에 문제가 없다면,</text>
+        <text x="0" y="175" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">주가 하락은 손절매가 아니라 <tspan font-weight="700" fill="#10B981">추가 매수 기회</tspan></text>
+
+        <text x="0" y="225" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#134074">• 2배 수익 후 조기 매도 금지</text>
+        <text x="0" y="250" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">"두 배가 되었다고 팔아치웠다면</text>
+        <text x="0" y="270" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">나는 10루타 종목을 단 하나도 만나지 못했을 것이다."</text>
+      </g>
+    </g>
+
+    <!-- Pillar 3: 진정한 매도 시점 -->
+    <g id="p3" transform="translate(795, 0)">
+      <rect width="365" height="495" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#10B981" rx="3"/>
+
+      <text x="25" y="45" font-family="Pretendard, sans-serif" font-size="20" font-weight="800" fill="#0B2545">3. 진정한 매도 시점</text>
+      <text x="25" y="70" font-family="Pretendard, sans-serif" font-size="14" font-weight="600" fill="#10B981">스토리가 끝났을 때 결별하라</text>
+      <line x1="25" y1="88" x2="340" y2="88" stroke="#E2E8F0" stroke-width="1"/>
+
+      <g transform="translate(25, 110)">
+        <text x="0" y="20" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#134074">■ 매수 이유가 사라졌을 때</text>
+        <text x="0" y="45" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">처음 그 주식을 샀던 본래의 비즈니스</text>
+        <text x="0" y="65" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">스토리가 훼손되었을 때 과감히 매도</text>
+
+        <text x="0" y="110" font-family="Pretendard, sans-serif" font-size="15" font-weight="700" fill="#134074">■ 대표적인 매도 신호</text>
+        <text x="0" y="135" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 2년 연속 시장 점유율 하락</text>
+        <text x="0" y="157" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 엉뚱한 사업다악화(Diworsification)</text>
+        <text x="0" y="179" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• 과도한 부채와 R&amp;D 투자 축소</text>
+        <text x="0" y="201" font-family="Pretendard, sans-serif" font-size="14" font-weight="400" fill="#1D2430">• PER이 역사적 평균치를 극단적 초과</text>
+
+        <rect x="0" y="235" width="315" height="90" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+        <text x="15" y="265" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#0B2545">💡 교체 매매(Switching) 전략</text>
+        <text x="15" y="290" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#5A6578">주가가 충분히 오른 주식을 팔아,</text>
+        <text x="15" y="310" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#5A6578">아직 덜 오른 매력적인 종목으로 교체</text>
+      </g>
+    </g>
+  </g>
+</svg>

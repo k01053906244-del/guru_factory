@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="8" fill="#0B2545"/>
+
+  <g id="header" transform="translate(60, 45)">
+    <rect x="0" y="0" width="140" height="26" rx="13" fill="#F4F6F9"/>
+    <text x="70" y="18" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#C59B27" text-anchor="middle">2심 : 상식 심문</text>
+    <text x="0" y="62" font-family="Pretendard, sans-serif" font-size="32" font-weight="800" fill="#0B2545">2심 결과 : 20점 / 30점 획득 (소외주 여부 감점)</text>
+    <text x="0" y="94" font-family="Pretendard, sans-serif" font-size="17" font-weight="500" fill="#5A6578">초등학생도 아는 명확한 사업이지만, 전 국민이 알고 있어 소외 프리미엄 부재</text>
+  </g>
+
+  <g id="cards" transform="translate(60, 160)">
+    <g transform="translate(0, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#10B981" rx="3"/>
+      <rect x="25" y="25" width="80" height="28" rx="6" fill="#DCFCE7"/>
+      <text x="65" y="44" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#166534" text-anchor="middle">Q1. 10점</text>
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#0B2545">크레용 테스트 : 통과</text>
+      <line x1="25" y1="105" x2="340" y2="105" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="140" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#134074">■ 실제 진단:</text>
+      <text x="25" y="165" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">"스마트폰과 가전을 팔고, 모든 전자기기에</text>
+      <text x="25" y="187" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">들어가는 메모리 반도체를 만들어 판다."</text>
+      <text x="25" y="212" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#10B981">➔ 초등학생도 1분 만에 이해 완료 (만점)</text>
+      <rect x="20" y="260" width="325" height="95" rx="8" fill="#FFFFFF"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#0B2545">💬 린치의 코멘트:</text>
+      <text x="35" y="310" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"돈 버는 구조가 단순하고 확실하다.</text>
+      <text x="35" y="330" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">이해하기 쉬운 사업 모델이다."</text>
+      <rect x="20" y="370" width="325" height="32" rx="6" fill="#10B981"/>
+      <text x="182" y="392" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">[V] 통과 (+10점)</text>
+    </g>
+
+    <g transform="translate(397, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#10B981" rx="3"/>
+      <rect x="25" y="25" width="80" height="28" rx="6" fill="#DCFCE7"/>
+      <text x="65" y="44" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#166534" text-anchor="middle">Q2. 10점</text>
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#0B2545">일상 관찰 우위 : 통과</text>
+      <line x1="25" y1="105" x2="340" y2="105" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="140" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#134074">■ 실제 진단:</text>
+      <text x="25" y="165" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">내 주머니의 갤럭시폰, 거실의 TV,</text>
+      <text x="25" y="187" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">사무실 컴퓨터의 SSD까지 일상 점유율 압도.</text>
+      <text x="25" y="212" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#10B981">➔ 일상 속 소비 관찰 입증 (만점)</text>
+      <rect x="20" y="260" width="325" height="95" rx="8" fill="#FFFFFF"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#0B2545">💬 린치의 코멘트:</text>
+      <text x="35" y="310" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"소비자가 제품을 직접 만지고 쓰는 것을</text>
+      <text x="35" y="330" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">확인할 수 있는 확실한 생활 밀착형 기업."</text>
+      <rect x="20" y="370" width="325" height="32" rx="6" fill="#10B981"/>
+      <text x="182" y="392" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">[V] 통과 (+10점)</text>
+    </g>
+
+    <g transform="translate(795, 0)">
+      <rect width="365" height="420" rx="12" fill="#F4F6F9" stroke="#E2E8F0" stroke-width="1"/>
+      <rect width="365" height="6" fill="#EF4444" rx="3"/>
+      <rect x="25" y="25" width="80" height="28" rx="6" fill="#FEE2E2"/>
+      <text x="65" y="44" font-family="Pretendard, sans-serif" font-size="13" font-weight="800" fill="#DC2626" text-anchor="middle">Q3. 0점</text>
+      <text x="25" y="85" font-family="Pretendard, sans-serif" font-size="18" font-weight="800" fill="#0B2545">소외주 선점 : 불합격</text>
+      <line x1="25" y1="105" x2="340" y2="105" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="25" y="140" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" fill="#DC2626">■ 감점 사유:</text>
+      <text x="25" y="165" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">대한민국 국민 500만 명이 보유한 국민주.</text>
+      <text x="25" y="187" font-family="Pretendard, sans-serif" font-size="13" font-weight="400" fill="#1D2430">매일 뉴스 1면에 도배되며 소외 프리미엄 0.</text>
+      <text x="25" y="212" font-family="Pretendard, sans-serif" font-size="13" font-weight="600" fill="#DC2626">➔ 남들보다 앞선 선점 이점 없음 (0점)</text>
+      <rect x="20" y="260" width="325" height="95" rx="8" fill="#FFFFFF"/>
+      <text x="35" y="285" font-family="Pretendard, sans-serif" font-size="12" font-weight="700" fill="#DC2626">💬 린치의 팩폭:</text>
+      <text x="35" y="310" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">"온 국민이 떠드는 유명한 주식에서는</text>
+      <text x="35" y="330" font-family="Pretendard, sans-serif" font-size="12" font-weight="400" fill="#5A6578">10루타 대박이 절대 나오지 않는다."</text>
+      <rect x="20" y="370" width="325" height="32" rx="6" fill="#EF4444"/>
+      <text x="182" y="392" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">[X] 불합격 (0점)</text>
+    </g>
+  </g>
+</svg>

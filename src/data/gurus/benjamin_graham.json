@@ -1,0 +1,73 @@
+﻿{
+  "version": "1.0.0",
+  "guru_id": "benjamin_graham",
+  "guru_name_ko": "벤저민 그레이엄",
+  "guru_name_en": "Benjamin Graham",
+  "tier_status": "PAID_VIP",
+  "core_philosophy": "절대적 안전마진(Margin of Safety)과 순유동자산(NCAV) 청산가치 철학",
+  "categories": [
+    { "id": "net_net", "name": "순유동자산주 (Net-Net)", "growth_rate": "자산청산", "purpose": "원금 보전 & 50% 반등" },
+    { "id": "defensive_value", "name": "방어적 가치주", "growth_rate": "안정성", "purpose": "하방 경직성" }
+  ],
+  "hearing_questions": [
+    {
+      "id": "BG01",
+      "phase": 2,
+      "title": "NCAV 안전마진 (시총 < 순유동자산*2/3)",
+      "type": "quantitative",
+      "metric": "pbr",
+      "benchmark": "<= 0.8",
+      "weight": 10,
+      "question": "회사를 당장 청산해도 남는 순유동자산(유동자산-총부채)보다 시가총액이 30% 이상 싼가?",
+      "quote": "안전마진의 비밀은 1달러짜리 지폐를 50센트에 사는 데 있다."
+    },
+    {
+      "id": "BG02",
+      "phase": 2,
+      "title": "PER 10배 이하 저평가",
+      "type": "quantitative",
+      "metric": "per",
+      "benchmark": "<= 10.0",
+      "weight": 10,
+      "question": "주가수익비율(PER)이 10배 이하로 시장 평균 대비 극단적으로 저평가인가?",
+      "quote": "시장 씨(Mr. Market)의 비관론을 이용해 헐값에 매수하라."
+    },
+    {
+      "id": "BG03",
+      "phase": 3,
+      "title": "부채 건전성 (유동비율 200% 이상)",
+      "type": "quantitative",
+      "metric": "debt_to_equity",
+      "benchmark": "<= 50.0%",
+      "weight": 10,
+      "question": "유동부채 대비 유동자산이 2배 이상 많아 어떤 파산 위기에도 끄떡없는가?",
+      "quote": "첫 번째 원칙은 원금을 잃지 않는 것이며, 두 번째는 첫 번째 원칙을 잊지 않는 것이다."
+    }
+  ],
+  "verdict_matrix": [
+    {
+      "min_score": 25,
+      "max_score": 30,
+      "tier": "특급 담배꽁초 (안전마진 100%)",
+      "badge": "🚬",
+      "action": "매수 후 50% 반등 시 기계적 매도",
+      "verdict_text": "바닥에 떨어진 담배꽁초의 마지막 한 모금이다. 하방 위험이 극히 제한적인 확실한 차익 기회다."
+    },
+    {
+      "min_score": 15,
+      "max_score": 24,
+      "tier": "보통의 방어적 가치주",
+      "badge": "📊",
+      "action": "분할 매수 및 장기 대기",
+      "verdict_text": "파산 위험은 적으나 모멘텀이 약하다. 추가적인 안전마진 할인을 기다려라."
+    },
+    {
+      "min_score": 0,
+      "max_score": 14,
+      "tier": "투기적 거품 주식",
+      "badge": "🧨",
+      "action": "절대 매수 금지",
+      "verdict_text": "원금 보장의 최소한의 안전마진도 없다. 투자자가 아닌 도박꾼의 영역이다."
+    }
+  ]
+}
