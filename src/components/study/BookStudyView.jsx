@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { GuruScreenerService } from '../../services/guruScreenerService';
+import { AuthService } from '../../services/authService';
 import VipUpgradeModal from '../common/VipUpgradeModal';
+import AuthModal from '../common/AuthModal';
 import GuruAudioPlayer from './GuruAudioPlayer';
 
 export default function BookStudyView({ selectedGuru, currentStock, onNavigate }) {
@@ -11,6 +13,11 @@ export default function BookStudyView({ selectedGuru, currentStock, onNavigate }
   const [curatedStocks, setCuratedStocks] = useState([]);
   const [isVip, setIsVip] = useState(false);
   const [isVipModalOpen, setIsVipModalOpen] = useState(false);
+
+  // 👤 로그인 상태 & 다운로드 게이트 모달
+  const [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser());
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [pendingDownload, setPendingDownload] = useState(null);
 
   // 🧠 1:1 대화형 AI 코칭 상태
   const [chatMessages, setChatMessages] = useState([
@@ -23,6 +30,14 @@ export default function BookStudyView({ selectedGuru, currentStock, onNavigate }
   const [isAiThinking, setIsAiThinking] = useState(false);
 
   const totalSlides = 8;
+
+  useEffect(() => {
+    const handleAuthChange = () => {
+      setCurrentUser(AuthService.getCurrentUser());
+    };
+    window.addEventListener('auth_state_changed', handleAuthChange);
+    return () => window.removeEventListener('auth_state_changed', handleAuthChange);
+  }, []);
 
   useEffect(() => {
     if (selectedGuru) {
@@ -50,7 +65,38 @@ export default function BookStudyView({ selectedGuru, currentStock, onNavigate }
   };
 
   // 슬라이드 SVG 파일 경로
-  const currentSvgPath = `/slides/peter_lynch/${slideSubCategory}/page_0${currentSlideIndex}.svg`;
+  const currentSvgPath = `./slides/peter_lynch/${slideSubCategory}/page_0${currentSlideIndex}.svg`;
+
+  // 📥 로그인 인증 기반 PPTX 다운로드 핸들러
+  const handleDownloadPptx = (fileUrl, fileName) => {
+    if (!AuthService.isLoggedIn()) {
+      setPendingDownload({ fileUrl, fileName });
+      setIsAuthModalOpen(true);
+      return;
+    }
+
+    // 로그인된 경우 즉시 다운로드 실행
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleLoginSuccess = (user) => {
+    setCurrentUser(user);
+    if (pendingDownload) {
+      const { fileUrl, fileName } = pendingDownload;
+      const link = document.createElement('a');
+      link.href = fileUrl;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setPendingDownload(null);
+    }
+  };
 
   // AI 코칭 질문 전송 핸들러
   const handleSendMessage = (customText) => {
@@ -64,255 +110,268 @@ export default function BookStudyView({ selectedGuru, currentStock, onNavigate }
 
     setTimeout(() => {
       let reply = '';
-      const q = textToSend.toLowerCase();
+      const lower = textToSend.toLowerCase();
 
-      if (q.includes('기업 유형') || q.includes('유형')) {
-        reply = `《${currentStock}》은(는) 안정적인 시장 점유율과 현금 흐름을 가진 [대형우량주(Stalwart)] 범주에 가깝습니다. 대형우량주는 연 10~12%의 꾸준한 복리 수익과 하락장 방어가 목적이지, 단기간 10배 폭등을 기대하면 안 됩니다.`;
-      } else if (q.includes('peg') || q.includes('저평가')) {
-        reply = `PEG(주가이익증가비율)는 'PER ÷ 이익성장률'입니다. PEG가 1.0 미만이면 기업의 성장 속도에 비해 주가가 바겐세일 상태라는 확실한 증거이며, 0.5 미만이면 제가 마젤란 펀드에서 무조건 쓸어 담던 10루타 후보입니다.`;
-      } else if (q.includes('부채') || q.includes('위험')) {
-        reply = `부채비율이 50%를 넘어가고 단기 차입금이 많은 기업은 불황이 오면 파산 위험 1순위입니다. 반대로 부채가 적고 순현금이 시총의 상당 부분을 차지하는 기업은 절대 망하지 않습니다.`;
-      } else if (q.includes('매수') || q.includes('언제')) {
-        reply = `주가가 떨어졌다고 무조건 사지 마세요. 초등학생에게 2분 안에 '이 회사가 돈을 어떻게 버는지' 설명할 수 있고, 재고가 줄어들며 이익이 늘어나는 팩트가 KRX 공시로 확인될 때 매수해야 합니다.`;
+      if (lower.includes('유형') || lower.includes('성장') || lower.includes('대형')) {
+        reply = `《월가의 영웅》에서 기업은 6가지로 나뉩니다: 1) 저성장주, 2) 대형우량주, 3) 고성장주, 4) 경기순환주, 5) 회생주, 6) 자산주입니다. ${currentStock || '이 종목'}의 성장률과 PER, 배당률을 보면 어디에 속하는지 정확히 진단할 수 있습니다. 10대 청문회를 돌려보셨나요?`;
+      } else if (lower.includes('peg') || lower.includes('per') || lower.includes('밸류')) {
+        reply = `제가 가장 중요하게 보는 지표는 바로 PEG(PER / 이익성장률)입니다! PEG가 1.0 이하이면 매우 훌륭하고 저평가된 상태입니다. 0.5 이하라면 월가의 황금 보물이지요. 반대로 1.5를 넘어가면 아무리 좋은 회사라도 주가에 거품이 낀 것입니다.`;
+      } else if (lower.includes('부채') || lower.includes('안전') || lower.includes('위험')) {
+        reply = `위기 때 망하지 않는 회사를 고르는 법은 간단합니다. '부채비율이 50% 이하'이거나 순현금이 시가총액의 상당 부분을 차지하는지 확인하세요. 부채가 없는 회사는 파산할 수 없습니다!`;
       } else {
-        reply = `좋은 질문입니다! 《${selectedGuru.bookTitle}》의 제1원칙은 "내가 잘 아는 곳에서 시작하라"입니다. 《${currentStock}》의 일상 속 경쟁력과 토스 실시간 재무(PEG, 부채비율)를 교차 검증하시면 실패하지 않는 투자를 하실 수 있습니다.`;
+        reply = `좋은 질문입니다! 《월가의 영웅》의 핵심은 "당신이 이미 알고 있는 일상과 쇼핑몰에서 10루타(1000% 수익) 종목을 찾는 것"입니다. ${currentStock || '이 종목'}의 제품이나 서비스를 소비자들이 열광하며 계속 쓰고 있는지 먼저 확인해 보세요!`;
       }
 
       setChatMessages([...newMsgs, { sender: 'guru', text: reply }]);
       setIsAiThinking(false);
-    }, 700);
+    }, 900);
   };
 
-  const quickQuestions = [
-    `《${currentStock}》은 6대 기업 유형 중 어디에 속하나요?`,
-    "PEG 1.0 이하가 왜 10루타의 필수 조건인가요?",
-    "부채비율 50%를 넘으면 왜 위험한가요?",
-    "피터 린치 거장님, 언제 매수해야 하나요?"
-  ];
-
   return (
-    <div className="space-y-6 pb-16 animate-fadeIn max-w-4xl mx-auto">
+    <div className="space-y-6 pb-16 animate-fadeIn max-w-5xl mx-auto">
       
-      {/* 🎧 1. 최상단: AI 오디오 브리핑 플레이어 (노트북LM 음성 직강 연동) */}
-      <GuruAudioPlayer
-        title="쇼핑카트에서 발견한 2,700% 수익의 비결"
-        author={selectedGuru.nameKo}
-        audioSrc="/audio/peter_lynch/shopping_cart_2700_secret.m4a"
-      />
-
-      {/* 2. 상단 4대 실시간 서비스 모드 전환 탭 */}
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-3 bg-slate-900/90 backdrop-blur-xl p-4 rounded-2xl border border-white/20 shadow-xl">
-        <div className="flex items-center gap-3">
-          <img
-            src={selectedGuru.avatar}
-            alt={selectedGuru.nameKo}
-            className="w-11 h-11 rounded-full border border-amber-400 object-cover shadow"
-          />
-          <div>
-            <div className="flex items-center gap-2">
-              <h2 className="text-[17px] font-black text-white leading-snug">
-                《{selectedGuru.bookTitle}》 실시간 명저 학습실
-              </h2>
-              {isVip && (
-                <span className="px-2 py-0.2 bg-amber-400 text-slate-950 text-[10px] font-black rounded-full">
-                  👑 VIP ACTIVE
+      {/* 1. 상단 마스터 헤더 & 오디오 서비스 뱃지 */}
+      <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 p-6 md:p-8 rounded-[2.5rem] border border-amber-400/30 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <img
+              src={selectedGuru.avatar}
+              alt={selectedGuru.nameKo}
+              className="w-16 h-16 rounded-full border-2 border-amber-400 object-cover shadow-lg"
+            />
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="text-[11px] font-extrabold text-amber-300 uppercase tracking-wider">
+                  {selectedGuru.tierBadge}
                 </span>
-              )}
+                <span className="text-white/60 text-[12px]">· {selectedGuru.period}</span>
+              </div>
+              <h2 className="text-[24px] md:text-[30px] font-black text-white leading-tight">
+                {selectedGuru.nameKo} 명저 학습실
+              </h2>
+              <p className="text-body-md text-amber-200/90 font-bold mt-1">
+                《{selectedGuru.bookTitle}》
+              </p>
             </div>
-            <span className="text-[12px] text-amber-300 font-bold">
-              {selectedGuru.nameKo}의 고화질 슬라이드 · 1:1 AI 코칭 · 선별 종목
-            </span>
           </div>
-        </div>
 
-        {/* 4대 서비스 뷰 모드 스위치 */}
-        <div className="flex flex-wrap items-center bg-slate-950 p-1 rounded-xl border border-white/10 gap-1">
-          <button
-            onClick={() => setStudyMode('ppt_slides')}
-            className={`px-3 py-1.5 rounded-lg text-[12px] font-black transition-all flex items-center gap-1 ${
-              studyMode === 'ppt_slides'
-                ? 'bg-indigo-600 text-white shadow'
-                : 'text-white/60 hover:text-white'
-            }`}
-          >
-            <span>📊 PPT 슬라이드</span>
-          </button>
-
-          <button
-            onClick={() => setStudyMode('ai_coaching')}
-            className={`px-3 py-1.5 rounded-lg text-[12px] font-black transition-all flex items-center gap-1 ${
-              studyMode === 'ai_coaching'
-                ? 'bg-purple-600 text-white shadow'
-                : 'text-purple-300 hover:text-white'
-            }`}
-          >
-            <span>🧠 1:1 AI 코칭</span>
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          </button>
-
-          <button
-            onClick={() => setStudyMode('curated_stocks')}
-            className={`px-3 py-1.5 rounded-lg text-[12px] font-black transition-all flex items-center gap-1 ${
-              studyMode === 'curated_stocks'
-                ? 'bg-amber-500 text-slate-950 shadow'
-                : 'text-amber-300 hover:text-white'
-            }`}
-          >
-            <span>💎 거장 선별 종목</span>
-            <span className="px-1.5 py-0.2 bg-slate-900 text-amber-300 text-[9px] font-black rounded-full">
-              VIP
-            </span>
-          </button>
-
-          <button
-            onClick={() => setStudyMode('full_text')}
-            className={`px-3 py-1.5 rounded-lg text-[12px] font-black transition-all ${
-              studyMode === 'full_text'
-                ? 'bg-indigo-600 text-white shadow'
-                : 'text-white/60 hover:text-white'
-            }`}
-          >
-            <span>📑 10대 룰셋</span>
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => onNavigate('diagnosis')}
+              className="px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-black text-[14px] shadow-lg flex items-center gap-2 transition-all active:scale-95 cursor-pointer"
+            >
+              <span className="material-symbols-outlined text-[18px]">gavel</span>
+              <span>10대 청문회 진단하러 가기</span>
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* 3. PPT 슬라이드 덱 뷰어 (고화질 SVG 24장) */}
+      {/* 2. 🎧 [STEP 04 실현] 피터 린치 실전 명저 오디오 플레이어 (56.3MB) */}
+      <GuruAudioPlayer selectedGuru={selectedGuru} />
+
+      {/* 3. 명저 스터디 4대 탭 바 */}
+      <div className="flex flex-wrap gap-2 border-b border-white/10 pb-2">
+        <button
+          onClick={() => setStudyMode('ppt_slides')}
+          className={`px-4 py-2.5 rounded-2xl font-black text-[13px] transition-all flex items-center gap-2 cursor-pointer ${
+            studyMode === 'ppt_slides'
+              ? 'bg-indigo-600 text-white shadow-lg border border-indigo-400/50'
+              : 'bg-white/5 hover:bg-white/10 text-white/70'
+          }`}
+        >
+          <span className="material-symbols-outlined text-[18px]">slideshow</span>
+          <span>📊 PPT 슬라이드 교재 (24장)</span>
+        </button>
+
+        <button
+          onClick={() => setStudyMode('ai_coaching')}
+          className={`px-4 py-2.5 rounded-2xl font-black text-[13px] transition-all flex items-center gap-2 cursor-pointer ${
+            studyMode === 'ai_coaching'
+              ? 'bg-purple-600 text-white shadow-lg border border-purple-400/50'
+              : 'bg-white/5 hover:bg-white/10 text-white/70'
+          }`}
+        >
+          <span className="material-symbols-outlined text-[18px]">psychology</span>
+          <span>🧠 1:1 대화형 AI 코칭룸</span>
+        </button>
+
+        <button
+          onClick={() => setStudyMode('curated_stocks')}
+          className={`px-4 py-2.5 rounded-2xl font-black text-[13px] transition-all flex items-center gap-2 cursor-pointer ${
+            studyMode === 'curated_stocks'
+              ? 'bg-amber-500 text-slate-950 shadow-lg border border-amber-300 font-black'
+              : 'bg-white/5 hover:bg-white/10 text-white/70'
+          }`}
+        >
+          <span className="material-symbols-outlined text-[18px]">stars</span>
+          <span>💎 거장 선별 포트폴리오</span>
+        </button>
+
+        <button
+          onClick={() => setStudyMode('full_text')}
+          className={`px-4 py-2.5 rounded-2xl font-black text-[13px] transition-all flex items-center gap-2 cursor-pointer ${
+            studyMode === 'full_text'
+              ? 'bg-emerald-600 text-white shadow-lg border border-emerald-400/50'
+              : 'bg-white/5 hover:bg-white/10 text-white/70'
+          }`}
+        >
+          <span className="material-symbols-outlined text-[18px]">rule</span>
+          <span>📑 10대 질문 룰셋 총람</span>
+        </button>
+      </div>
+
+      {/* 📊 3. PPT 슬라이드 모드 (고화질 SVG + PPTX 원본 다운로드 바) */}
       {studyMode === 'ppt_slides' && (
-        <div className="space-y-4">
-          {/* 슬라이드 3대 서브 카테고리 */}
-          <div className="flex flex-wrap items-center justify-between gap-2 bg-slate-950/80 p-2 rounded-2xl border border-white/10">
-            <div className="flex items-center gap-1.5">
-              <button
-                onClick={() => { setSlideSubCategory('summary'); setCurrentSlideIndex(1); }}
-                className={`px-3 py-1 rounded-xl text-[12px] font-extrabold transition-all ${
-                  slideSubCategory === 'summary'
-                    ? 'bg-indigo-600 text-white shadow'
-                    : 'text-white/60 hover:text-white'
-                }`}
-              >
-                📘 1. 피터린치 핵심 요약편 (8p)
-              </button>
-              <button
-                onClick={() => { setSlideSubCategory('hearing'); setCurrentSlideIndex(1); }}
-                className={`px-3 py-1 rounded-xl text-[12px] font-extrabold transition-all ${
-                  slideSubCategory === 'hearing'
-                    ? 'bg-indigo-600 text-white shadow'
-                    : 'text-white/60 hover:text-white'
-                }`}
-              >
-                📝 2. 10대 청문회 워크북 (8p)
-              </button>
-              <button
-                onClick={() => { setSlideSubCategory('samsung_audit'); setCurrentSlideIndex(1); }}
-                className={`px-3 py-1 rounded-xl text-[12px] font-extrabold transition-all ${
-                  slideSubCategory === 'samsung_audit'
-                    ? 'bg-indigo-600 text-white shadow'
-                    : 'text-white/60 hover:text-white'
-                }`}
-              >
-                📊 3. 삼성전자 실전 완료본 (8p)
-              </button>
+        <div className="space-y-4 animate-fadeIn">
+          
+          {/* 서브 카테고리 3종 선택 탭 */}
+          <div className="flex flex-wrap gap-2 bg-slate-900/80 p-2 rounded-2xl border border-white/10">
+            <button
+              onClick={() => { setSlideSubCategory('summary'); setCurrentSlideIndex(1); }}
+              className={`px-3.5 py-2 rounded-xl text-[12px] font-extrabold transition-all ${
+                slideSubCategory === 'summary'
+                  ? 'bg-indigo-600 text-white shadow'
+                  : 'text-white/60 hover:text-white'
+              }`}
+            >
+              1. 핵심요약편 (8p)
+            </button>
+            <button
+              onClick={() => { setSlideSubCategory('hearing'); setCurrentSlideIndex(1); }}
+              className={`px-3.5 py-2 rounded-xl text-[12px] font-extrabold transition-all ${
+                slideSubCategory === 'hearing'
+                  ? 'bg-indigo-600 text-white shadow'
+                  : 'text-white/60 hover:text-white'
+              }`}
+            >
+              2. 청문회 워크북 양식 (8p)
+            </button>
+            <button
+              onClick={() => { setSlideSubCategory('samsung_audit'); setCurrentSlideIndex(1); }}
+              className={`px-3.5 py-2 rounded-xl text-[12px] font-extrabold transition-all ${
+                slideSubCategory === 'samsung_audit'
+                  ? 'bg-indigo-600 text-white shadow'
+                  : 'text-white/60 hover:text-white'
+              }`}
+            >
+              3. 삼성전자 실전분석 완료본 (8p)
+            </button>
+          </div>
+
+          {/* 슬라이드 SVG 뷰어 */}
+          <div className="bg-slate-950 rounded-[2rem] border-2 border-indigo-500/40 p-2 md:p-4 shadow-2xl overflow-hidden relative">
+            <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden bg-slate-900 flex items-center justify-center border border-white/10">
+              <img
+                src={currentSvgPath}
+                alt={`슬라이드 ${currentSlideIndex}페이지`}
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.parentNode.innerHTML = `
+                    <div class="p-8 text-center text-white/70 space-y-2">
+                      <span class="material-symbols-outlined text-[48px] text-amber-400">slideshow</span>
+                      <p class="font-extrabold text-[16px]">슬라이드 ${currentSlideIndex} / ${totalSlides} 페이지</p>
+                      <p class="text-[12px] text-white/40">《${selectedGuru.bookTitle}》 고화질 슬라이드 교재</p>
+                    </div>
+                  `;
+                }}
+              />
             </div>
-
-            <span className="text-[11px] font-black text-amber-300 px-2 py-0.5 bg-white/10 rounded">
-              SLIDE {currentSlideIndex} / {totalSlides}
-            </span>
           </div>
 
-          {/* 고화질 SVG 슬라이드 뷰어 캔버스 */}
-          <div className="aspect-[16/9] w-full bg-slate-950 rounded-[2rem] border-2 border-indigo-500/40 shadow-2xl overflow-hidden relative flex items-center justify-center group">
-            <img
-              key={currentSvgPath}
-              src={currentSvgPath}
-              alt={`Slide ${currentSlideIndex}`}
-              className="w-full h-full object-contain select-none"
-            />
-
+          {/* 슬라이드 네비게이션 컨트롤러 */}
+          <div className="flex items-center justify-between bg-slate-900/90 p-4 rounded-2xl border border-white/10">
             <button
               onClick={handlePrevSlide}
-              disabled={currentSlideIndex === 1}
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-slate-950/70 hover:bg-slate-900 border border-white/20 disabled:opacity-20 text-white flex items-center justify-center shadow-lg transition-all active:scale-95"
-            >
-              <span className="material-symbols-outlined text-[24px]">chevron_left</span>
-            </button>
-
-            <button
-              onClick={handleNextSlide}
-              disabled={currentSlideIndex === totalSlides}
-              className="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-slate-950/70 hover:bg-slate-900 border border-white/20 disabled:opacity-20 text-white flex items-center justify-center shadow-lg transition-all active:scale-95"
-            >
-              <span className="material-symbols-outlined text-[24px]">chevron_right</span>
-            </button>
-          </div>
-
-          {/* 슬라이드 넘김 컨트롤러 */}
-          <div className="flex justify-between items-center bg-slate-900/80 p-3 rounded-2xl border border-white/10">
-            <button
-              onClick={handlePrevSlide}
-              disabled={currentSlideIndex === 1}
-              className="px-4 py-1.5 bg-white/10 hover:bg-white/20 disabled:opacity-30 text-white font-extrabold text-[12px] rounded-xl flex items-center gap-1 border border-white/15"
+              disabled={currentSlideIndex <= 1}
+              className="px-4 py-1.5 bg-white/10 hover:bg-white/20 disabled:opacity-30 text-white font-extrabold text-[12px] rounded-xl flex items-center gap-1 border border-white/15 cursor-pointer"
             >
               <span className="material-symbols-outlined text-[16px]">arrow_back</span>
               <span>이전 슬라이드</span>
             </button>
 
-            <div className="flex items-center gap-1.5">
-              {Array.from({ length: totalSlides }).map((_, idx) => (
+            <div className="flex items-center gap-1">
+              {Array.from({ length: totalSlides }, (_, i) => i + 1).map((num) => (
                 <button
-                  key={idx}
-                  onClick={() => setCurrentSlideIndex(idx + 1)}
-                  className={`h-2 rounded-full transition-all ${
-                    currentSlideIndex === idx + 1 ? 'w-6 bg-amber-400' : 'w-2 bg-white/30'
+                  key={num}
+                  onClick={() => setCurrentSlideIndex(num)}
+                  className={`w-7 h-7 rounded-lg text-[12px] font-black transition-all cursor-pointer ${
+                    currentSlideIndex === num
+                      ? 'bg-amber-400 text-slate-950 font-black scale-110 shadow'
+                      : 'bg-white/10 text-white/60 hover:text-white'
                   }`}
-                />
+                >
+                  {num}
+                </button>
               ))}
             </div>
 
             <button
               onClick={handleNextSlide}
-              disabled={currentSlideIndex === totalSlides}
-              className="px-4 py-1.5 bg-white/10 hover:bg-white/20 disabled:opacity-30 text-white font-extrabold text-[12px] rounded-xl flex items-center gap-1 border border-white/15"
+              disabled={currentSlideIndex >= totalSlides}
+              className="px-4 py-1.5 bg-white/10 hover:bg-white/20 disabled:opacity-30 text-white font-extrabold text-[12px] rounded-xl flex items-center gap-1 border border-white/15 cursor-pointer"
             >
               <span>다음 슬라이드</span>
               <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
             </button>
           </div>
 
-          {/* 📥 실제 PPTX 원본 3종 다운로드 바 */}
-          <div className="bg-gradient-to-r from-indigo-950/90 via-slate-900 to-purple-950/90 p-5 rounded-[2rem] border border-amber-400/40 shadow-xl space-y-3">
-            <div className="flex items-center gap-2 text-amber-300 font-black text-[15px]">
-              <span className="material-symbols-outlined text-[20px]">download</span>
-              <span>대표님 제공 《1) 월가의 영웅》 PPTX 원본 3종 다운로드</span>
+          {/* 📥 실제 PPTX 원본 3종 다운로드 바 (🔒 로그인 게이트 적용) */}
+          <div className="bg-gradient-to-r from-indigo-950/90 via-slate-900 to-purple-950/90 p-5 md:p-6 rounded-[2rem] border-2 border-amber-400/50 shadow-2xl space-y-3.5">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+              <div className="flex items-center gap-2 text-amber-300 font-black text-[15px] md:text-[16px]">
+                <span className="material-symbols-outlined text-[22px]">download</span>
+                <span>대표님 제공 《1) 월가의 영웅》 PPTX 원본 3종 다운로드</span>
+              </div>
+              
+              {/* 로그인 상태 뱃지 */}
+              {currentUser ? (
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded-full text-[11px] font-black">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>{currentUser.name}님 로그인됨 · 다운로드 권한 활성</span>
+                </span>
+              ) : (
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-400/20 text-amber-300 border border-amber-400/40 rounded-full text-[11px] font-black">
+                  <span className="material-symbols-outlined text-[14px]">lock</span>
+                  <span>로그인 후 무료 다운로드</span>
+                </span>
+              )}
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-              <a
-                href="/downloads/peter_lynch/1_피터린치_핵심요약편.pptx"
-                download="1_피터린치_핵심요약편.pptx"
-                className="py-2.5 px-3 bg-white/10 hover:bg-white/20 border border-white/15 rounded-xl font-extrabold text-[12px] text-white flex items-center justify-center gap-1.5 shadow transition-all active:scale-95 text-center"
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <button
+                onClick={() => handleDownloadPptx('./downloads/peter_lynch/1_피터린치_핵심요약편.pptx', '1_피터린치_핵심요약편.pptx')}
+                className="py-3 px-3 bg-white/10 hover:bg-white/20 border border-white/15 rounded-2xl font-extrabold text-[12px] text-white flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95 text-center cursor-pointer group"
               >
-                <span className="material-symbols-outlined text-[16px] text-indigo-400">description</span>
+                <span className="material-symbols-outlined text-[18px] text-indigo-400 group-hover:scale-110 transition-transform">
+                  {currentUser ? 'description' : 'lock'}
+                </span>
                 <span>1. 핵심요약편.pptx</span>
-              </a>
+                {!currentUser && <span className="text-[10px] text-amber-300 font-bold bg-white/10 px-1.5 py-0.5 rounded">로그인</span>}
+              </button>
 
-              <a
-                href="/downloads/peter_lynch/2_삼성전자_청문회_완료본.pptx"
-                download="2_삼성전자_청문회_완료본.pptx"
-                className="py-2.5 px-3 bg-white/10 hover:bg-white/20 border border-white/15 rounded-xl font-extrabold text-[12px] text-white flex items-center justify-center gap-1.5 shadow transition-all active:scale-95 text-center"
+              <button
+                onClick={() => handleDownloadPptx('./downloads/peter_lynch/2_삼성전자_청문회_완료본.pptx', '2_삼성전자_청문회_완료본.pptx')}
+                className="py-3 px-3 bg-white/10 hover:bg-white/20 border border-white/15 rounded-2xl font-extrabold text-[12px] text-white flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95 text-center cursor-pointer group"
               >
-                <span className="material-symbols-outlined text-[16px] text-amber-400">verified</span>
+                <span className="material-symbols-outlined text-[18px] text-amber-400 group-hover:scale-110 transition-transform">
+                  {currentUser ? 'verified' : 'lock'}
+                </span>
                 <span>2. 삼성전자_완료본.pptx</span>
-              </a>
+                {!currentUser && <span className="text-[10px] text-amber-300 font-bold bg-white/10 px-1.5 py-0.5 rounded">로그인</span>}
+              </button>
 
-              <a
-                href="/downloads/peter_lynch/3_종목청문회_빈양식_워크북.pptx"
-                download="3_종목청문회_빈양식_워크북.pptx"
-                className="py-2.5 px-3 bg-white/10 hover:bg-white/20 border border-white/15 rounded-xl font-extrabold text-[12px] text-white flex items-center justify-center gap-1.5 shadow transition-all active:scale-95 text-center"
+              <button
+                onClick={() => handleDownloadPptx('./downloads/peter_lynch/3_종목청문회_빈양식_워크북.pptx', '3_종목청문회_빈양식_워크북.pptx')}
+                className="py-3 px-3 bg-white/10 hover:bg-white/20 border border-white/15 rounded-2xl font-extrabold text-[12px] text-white flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95 text-center cursor-pointer group"
               >
-                <span className="material-symbols-outlined text-[16px] text-emerald-400">edit_note</span>
+                <span className="material-symbols-outlined text-[18px] text-emerald-400 group-hover:scale-110 transition-transform">
+                  {currentUser ? 'edit_note' : 'lock'}
+                </span>
                 <span>3. 빈양식_워크북.pptx</span>
-              </a>
+                {!currentUser && <span className="text-[10px] text-amber-300 font-bold bg-white/10 px-1.5 py-0.5 rounded">로그인</span>}
+              </button>
             </div>
           </div>
         </div>
@@ -338,78 +397,83 @@ export default function BookStudyView({ selectedGuru, currentStock, onNavigate }
                   </span>
                 </div>
               </div>
-              <span className="px-2.5 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded-full text-[11px] font-extrabold">
-                🟢 AI 코치 실시간 연결됨
+
+              <span className="text-[11px] font-extrabold text-emerald-400 bg-emerald-500/20 px-2.5 py-1 rounded-full border border-emerald-500/30">
+                실시간 코칭 중
               </span>
             </div>
 
-            {/* 빠른 추천 질문 칩 */}
-            <div className="space-y-1.5">
-              <span className="text-[11px] font-bold text-white/50">⚡ 클릭해서 바로 질문하기:</span>
-              <div className="flex flex-wrap gap-1.5">
-                {quickQuestions.map((qText, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => handleSendMessage(qText)}
-                    className="px-3 py-1 bg-white/10 hover:bg-purple-600/40 border border-white/15 text-white/90 hover:text-white rounded-xl text-[12px] font-bold transition-all text-left"
-                  >
-                    💬 {qText}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* 대화 메시지 영역 */}
-            <div className="bg-slate-950/80 rounded-2xl p-4 border border-white/10 space-y-3 min-h-[220px] max-h-[360px] overflow-y-auto">
+            {/* 대화 로그 윈도우 */}
+            <div className="h-[360px] overflow-y-auto space-y-3 p-4 bg-slate-950/80 rounded-2xl border border-white/10 custom-scrollbar">
               {chatMessages.map((msg, idx) => (
                 <div
                   key={idx}
-                  className={`flex items-start gap-2.5 ${
-                    msg.sender === 'user' ? 'justify-end' : 'justify-start'
+                  className={`flex items-start gap-3 ${
+                    msg.sender === 'user' ? 'flex-row-reverse' : ''
                   }`}
                 >
-                  {msg.sender === 'guru' && (
-                    <img
-                      src={selectedGuru.avatar}
-                      alt="Guru"
-                      className="w-8 h-8 rounded-full border border-amber-400 object-cover flex-shrink-0 mt-0.5"
-                    />
-                  )}
-                  <div
-                    className={`p-3.5 rounded-2xl max-w-[82%] text-[13px] leading-relaxed shadow ${
-                      msg.sender === 'user'
-                        ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-tr-none'
-                        : 'bg-slate-900 border border-white/15 text-white/90 rounded-tl-none'
-                    }`}
-                  >
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-[14px] shadow ${
+                    msg.sender === 'user' ? 'bg-indigo-600 text-white' : 'bg-purple-600 text-white'
+                  }`}>
+                    {msg.sender === 'user' ? '나' : '구루'}
+                  </div>
+
+                  <div className={`p-4 rounded-2xl max-w-[80%] text-[13px] leading-relaxed shadow-md ${
+                    msg.sender === 'user'
+                      ? 'bg-indigo-600 text-white rounded-tr-none'
+                      : 'bg-slate-900 border border-purple-500/40 text-purple-100 rounded-tl-none'
+                  }`}>
                     {msg.text}
                   </div>
                 </div>
               ))}
 
               {isAiThinking && (
-                <div className="flex items-center gap-2 text-purple-300 text-[12px] font-bold p-2">
+                <div className="flex items-center gap-2 text-[12px] text-purple-300 p-2">
                   <span className="w-2 h-2 rounded-full bg-purple-400 animate-ping" />
-                  <span>피터 린치 거장이 원전을 바탕으로 답변을 작성 중입니다...</span>
+                  <span>피터 린치가 《월가의 영웅》 원전을 참고하여 답변을 정리 중입니다...</span>
                 </div>
               )}
             </div>
 
-            {/* 질문 입력 인풋 바 */}
-            <div className="flex gap-2">
+            {/* 빠른 추천 질문 칩 */}
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              <span className="text-[11px] font-bold text-white/50 self-center mr-1">추천 질문:</span>
+              <button
+                onClick={() => handleSendMessage(`《${currentStock || '이 종목'}》은 6대 기업 유형 중 어디에 속하나요?`)}
+                className="px-2.5 py-1 bg-white/10 hover:bg-white/20 text-white/80 text-[11px] font-bold rounded-lg border border-white/10"
+              >
+                🔍 6대 기업 유형 판별법
+              </button>
+              <button
+                onClick={() => handleSendMessage(`피터 린치가 생각하는 이상적인 PEG 비율 기준은 무엇인가요?`)}
+                className="px-2.5 py-1 bg-white/10 hover:bg-white/20 text-white/80 text-[11px] font-bold rounded-lg border border-white/10"
+              >
+                📊 PEG 비율 기준
+              </button>
+              <button
+                onClick={() => handleSendMessage(`부채비율 50% 기준은 왜 그렇게 엄격하게 보시나요?`)}
+                className="px-2.5 py-1 bg-white/10 hover:bg-white/20 text-white/80 text-[11px] font-bold rounded-lg border border-white/10"
+              >
+                🛡️ 부채비율 50% 원칙
+              </button>
+            </div>
+
+            {/* 입력 폼 */}
+            <div className="flex gap-2 pt-1">
               <input
                 type="text"
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
-                placeholder="피터 린치 거장에게 내 종목이나 투자 철학에 대해 질문하세요..."
-                className="flex-1 py-3 px-4 bg-slate-950 text-white font-bold text-[14px] rounded-xl border border-white/20 focus:border-purple-400 focus:outline-none placeholder:text-white/40"
+                placeholder="피터 린치에게 궁금한 투자 기준이나 종목 질문을 입력하세요..."
+                className="flex-1 py-3 px-4 bg-slate-950 text-white text-[14px] rounded-xl border border-purple-500/40 focus:outline-none focus:ring-2 focus:ring-purple-400"
               />
               <button
                 onClick={() => handleSendMessage()}
-                className="px-5 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-[13px] rounded-xl shadow-lg transition-all active:scale-95 flex items-center gap-1"
+                className="px-5 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-[14px] rounded-xl shadow-lg transition-all active:scale-95 flex items-center gap-1"
               >
-                <span>전송</span>
+                <span>질문</span>
                 <span className="material-symbols-outlined text-[16px]">send</span>
               </button>
             </div>
@@ -417,159 +481,110 @@ export default function BookStudyView({ selectedGuru, currentStock, onNavigate }
         </div>
       )}
 
-      {/* 💎 5. 거장 선별 추천 종목 뷰 */}
+      {/* 💎 5. 거장 선별 포트폴리오 (VIP 스크리너) */}
       {studyMode === 'curated_stocks' && (
-        <div className="space-y-4">
-          <div className="bg-gradient-to-r from-amber-500/20 via-purple-900/40 to-slate-900 p-6 rounded-[2rem] border border-amber-400/50 flex flex-col sm:flex-row justify-between sm:items-center gap-3">
+        <div className="space-y-4 animate-fadeIn">
+          <div className="flex justify-between items-center bg-slate-900/90 p-4 rounded-2xl border border-white/10">
             <div>
-              <div className="flex items-center gap-2">
-                <span className="text-[20px]">👑</span>
-                <h3 className="text-[19px] font-black text-white">
-                  {selectedGuru.nameKo} 알고리즘 100% 충족 선별 종목군
-                </h3>
-              </div>
-              <p className="text-[13px] text-white/80 mt-1">
-                토스증권 실시간 재무 데이터 기준 {selectedGuru.nameKo}의 10대 심문을 통과한 실시간 상위 종목 리스트입니다.
+              <h3 className="text-[17px] font-black text-white">
+                피터 린치 잣대 80점 이상 충족 종목 리스트
+              </h3>
+              <p className="text-[12px] text-white/60">
+                PEG 1.0 이하, 부채비율 50% 이하 팩트 기준 검증 완료
               </p>
             </div>
 
             {!isVip && (
               <button
                 onClick={() => setIsVipModalOpen(true)}
-                className="px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-[13px] rounded-xl shadow-lg whitespace-nowrap transition-all active:scale-95"
+                className="px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black text-[12px] rounded-xl shadow transition-all"
               >
-                전체 잠금 해제 (VIP)
+                🔒 VIP 전체 50개 종목 열람
               </button>
             )}
           </div>
 
-          <div className="grid gap-3">
-            {curatedStocks.map((item) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {curatedStocks.map((stock) => (
               <div
-                key={item.rank}
-                className={`p-5 rounded-2xl border transition-all relative overflow-hidden ${
-                  item.isUnlocked
-                    ? 'bg-slate-900/90 border-indigo-500/40 shadow-xl'
-                    : 'bg-slate-950/60 border-white/10 backdrop-blur-sm'
-                }`}
+                key={stock.name}
+                className="p-5 rounded-2xl bg-slate-900/80 border border-white/10 space-y-2 hover:border-amber-400/50 transition-all"
               >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <div className="flex items-start gap-3">
-                    <span className={`w-8 h-8 rounded-xl font-black text-[14px] flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                      item.rank === 1 ? 'bg-amber-400 text-slate-950' : 'bg-white/10 text-white/60'
-                    }`}>
-                      {item.rank}
-                    </span>
-
-                    <div className="space-y-1">
-                      <div className="flex items-center gap-2">
-                        <h4 className="text-[17px] font-black text-white">
-                          {item.stockName}
-                        </h4>
-                        {item.isTopOne && (
-                          <span className="px-2 py-0.2 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-black rounded-full">
-                            ✨ 1위 무료 공개
-                          </span>
-                        )}
-                        {!item.isUnlocked && (
-                          <span className="px-2 py-0.2 bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-black rounded-full">
-                            🔒 VIP 전용 잠금
-                          </span>
-                        )}
-                      </div>
-
-                      <p className={`text-[13px] ${item.isUnlocked ? 'text-white/80' : 'text-white/40 blur-xs select-none'}`}>
-                        {item.reason}
-                      </p>
-
-                      {item.isUnlocked && (
-                        <div className="flex flex-wrap items-center gap-3 pt-1 text-[12px] font-bold text-indigo-300">
-                          <span>현재가: {item.price?.toLocaleString()}원</span>
-                          <span>PEG: {item.peg_ratio}</span>
-                          <span>부채비율: {item.debt_to_equity}%</span>
-                          <span>점수: {item.score}점 ({item.badge} {item.tier})</span>
-                        </div>
-                      )}
-                    </div>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <span className="text-[11px] font-bold text-amber-300 uppercase">{stock.sector}</span>
+                    <h4 className="text-[18px] font-black text-white">{stock.name}</h4>
                   </div>
+                  <span className="px-2.5 py-1 bg-amber-400/20 text-amber-300 text-[12px] font-black rounded-lg border border-amber-400/40">
+                    {stock.score}점
+                  </span>
+                </div>
 
-                  <div className="self-end sm:self-center">
-                    {item.isUnlocked ? (
-                      <button
-                        onClick={() => {
-                          onNavigate('diagnosis');
-                        }}
-                        className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold text-[12px] rounded-xl shadow transition-all active:scale-95"
-                      >
-                        상세 청문회 보기
-                      </button>
-                    ) : (
-                      <button
-                        onClick={() => setIsVipModalOpen(true)}
-                        className="px-4 py-2 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-400/40 font-extrabold text-[12px] rounded-xl transition-all active:scale-95 flex items-center gap-1"
-                      >
-                        <span className="material-symbols-outlined text-[15px]">lock</span>
-                        <span>VIP 열람하기</span>
-                      </button>
-                    )}
+                <div className="grid grid-cols-3 gap-2 bg-slate-950/60 p-2.5 rounded-xl text-[11px]">
+                  <div>
+                    <span className="text-white/40 block">PEG</span>
+                    <span className="font-extrabold text-white">{stock.peg}</span>
+                  </div>
+                  <div>
+                    <span className="text-white/40 block">부채비율</span>
+                    <span className="font-extrabold text-white">{stock.debtRatio}%</span>
+                  </div>
+                  <div>
+                    <span className="text-white/40 block">ROE</span>
+                    <span className="font-extrabold text-emerald-400">{stock.roe}%</span>
                   </div>
                 </div>
+
+                <p className="text-[12px] text-white/70">{stock.reason}</p>
               </div>
             ))}
           </div>
         </div>
       )}
 
-      {/* 6. 전체 요약본 모드 */}
+      {/* 📑 6. 10대 질문 룰셋 총람 */}
       {studyMode === 'full_text' && (
-        <div className="space-y-4">
-          <section className="bg-slate-900/85 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-white/20 shadow-xl space-y-4">
-            <div className="flex items-center gap-2 text-amber-300 font-black text-[18px]">
-              <span className="material-symbols-outlined text-[24px]">psychology</span>
-              <h3>거장의 핵심 철학 (Core Philosophy)</h3>
-            </div>
-            <p className="text-[16px] text-white/90 font-bold leading-relaxed bg-slate-950/70 p-5 rounded-2xl border border-white/10 italic">
-              "{rule?.core_philosophy}"
-            </p>
-          </section>
+        <div className="bg-slate-900/90 p-6 rounded-[2rem] border border-white/10 space-y-4 animate-fadeIn">
+          <div className="flex items-center gap-2 text-emerald-400 font-black text-[18px]">
+            <span className="material-symbols-outlined text-[24px]">fact_check</span>
+            <h3>《{selectedGuru.bookTitle}》 10대 청문회 심문 기준표</h3>
+          </div>
 
-          <section className="bg-slate-900/85 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] border border-white/20 shadow-xl space-y-4">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center gap-2 text-indigo-300 font-black text-[18px]">
-                <span className="material-symbols-outlined text-[24px]">menu_book</span>
-                <h3>명저 10대 심문 공식 전체 일람</h3>
-              </div>
-            </div>
-
-            <div className="grid gap-3">
-              {questions.map((q, idx) => (
-                <div
-                  key={q.id}
-                  className="bg-slate-950/70 p-4 rounded-2xl border border-white/10 space-y-1"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-extrabold text-white text-[15px]">
-                      {idx + 1}. {q.title}
-                    </span>
-                    <span className="text-[10px] font-bold text-amber-300 bg-white/10 px-2 py-0.5 rounded">
-                      {q.type === 'quantitative' ? '정량 공식' : '정성 잣대'}
-                    </span>
-                  </div>
-                  <p className="text-[13px] text-white/80">{q.question}</p>
-                  <p className="text-[11px] text-amber-300/80 italic">💬 "{q.quote}"</p>
+          <div className="grid gap-3">
+            {questions.map((q, idx) => (
+              <div key={q.id} className="p-4 rounded-2xl bg-slate-950/80 border border-white/10 space-y-1">
+                <div className="flex justify-between items-center">
+                  <span className="font-black text-[14px] text-white">
+                    {idx + 1}. {q.title}
+                  </span>
+                  <span className="text-[11px] font-bold text-amber-300 bg-white/10 px-2 py-0.5 rounded">
+                    기준: {q.benchmark} (배점: {q.weight}점)
+                  </span>
                 </div>
-              ))}
-            </div>
-          </section>
+                <p className="text-[13px] text-white/80">{q.question}</p>
+                <p className="text-[11px] text-amber-300/80 italic">💬 "{q.quote}"</p>
+              </div>
+            ))}
+          </div>
         </div>
       )}
 
-      {/* VIP 업그레이드 모달 */}
+      {/* VIP 모달 */}
       <VipUpgradeModal
         isOpen={isVipModalOpen}
         onClose={() => setIsVipModalOpen(false)}
         onUpgradeSuccess={() => setIsVip(true)}
-        isVip={isVip}
+      />
+
+      {/* 👤 로그인/회원가입 게이트 모달 */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => {
+          setIsAuthModalOpen(false);
+          setPendingDownload(null);
+        }}
+        onLoginSuccess={handleLoginSuccess}
+        message="로그인하시면 《월가의 영웅》 PPTX 3종 원본 파일과 워크북을 무료로 즉시 다운로드하실 수 있습니다."
       />
     </div>
   );

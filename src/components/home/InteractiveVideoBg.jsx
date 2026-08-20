@@ -30,7 +30,7 @@ export default function InteractiveVideoBg({ isPlaying = true }) {
         className="w-full h-full object-cover brightness-95 contrast-105 gpu-layer"
         style={{ transform: 'translateZ(0)' }}
       >
-        <source src="/bg-video.mp4" type="video/mp4" />
+        <source src="./bg-video.mp4" type="video/mp4" />
       </video>
     </div>
   );

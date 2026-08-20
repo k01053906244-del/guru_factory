@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "byubinlife"
+  },
+  "targets": {
+    "byubinlife": {
+      "hosting": {
+        "guru": [
+          "byubin-guru"
+        ]
+      }
+    }
+  }
+}

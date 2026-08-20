@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export default function GuruAudioPlayer({
   title = "쇼핑카트에서 발견한 2,700% 수익의 비결",
   author = "피터 린치",
-  audioSrc = "/audio/peter_lynch/shopping_cart_2700_secret.m4a"
+  audioSrc = "./audio/peter_lynch/shopping_cart_2700_secret.m4a"
 }) {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);

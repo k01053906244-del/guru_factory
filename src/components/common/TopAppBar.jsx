@@ -1,8 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ApiKeyModal from './ApiKeyModal';
+import AuthModal from './AuthModal';
+import { AuthService } from '../../services/authService';
 
 export default function TopAppBar({ activeTab, onTabChange, selectedStock }) {
   const [isKeyModalOpen, setIsKeyModalOpen] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser());
+
+  useEffect(() => {
+    const handleAuthChange = () => {
+      setCurrentUser(AuthService.getCurrentUser());
+    };
+    window.addEventListener('auth_state_changed', handleAuthChange);
+    return () => window.removeEventListener('auth_state_changed', handleAuthChange);
+  }, []);
+
+  const handleLogout = () => {
+    AuthService.logout();
+  };
 
   const navItems = [
     { id: 'home', label: '홈 (명저 선택)', icon: 'home' },
@@ -63,7 +79,7 @@ export default function TopAppBar({ activeTab, onTabChange, selectedStock }) {
             })}
           </nav>
 
-          {/* 우측 BYOK 키 설정 & KRX 팩트체크 상태 뱃지 */}
+          {/* 우측 로그인/회원 프로필 & BYOK 키 설정 */}
           <div className="flex items-center gap-2">
             {selectedStock && (
               <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-indigo-950/80 border border-indigo-500/40 rounded-xl text-[12px] font-bold text-indigo-200">
@@ -72,10 +88,39 @@ export default function TopAppBar({ activeTab, onTabChange, selectedStock }) {
               </div>
             )}
 
+            {/* 👤 로그인 / 회원 프로필 버튼 */}
+            {currentUser ? (
+              <div className="flex items-center gap-2 bg-white/10 border border-emerald-500/40 px-3 py-1.5 rounded-xl shadow">
+                <img
+                  src={currentUser.avatar}
+                  alt={currentUser.name}
+                  className="w-6 h-6 rounded-full border border-emerald-400 object-cover"
+                />
+                <span className="text-[12px] font-bold text-emerald-300 hidden sm:inline">
+                  {currentUser.name}
+                </span>
+                <button
+                  onClick={handleLogout}
+                  className="text-[11px] text-white/50 hover:text-rose-300 underline ml-1 cursor-pointer"
+                  title="로그아웃"
+                >
+                  로그아웃
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={() => setIsAuthModalOpen(true)}
+                className="px-3.5 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-[12px] font-black rounded-xl border border-white/20 shadow-md transition-all active:scale-95 flex items-center gap-1.5 cursor-pointer"
+              >
+                <span className="material-symbols-outlined text-[16px]">account_circle</span>
+                <span>로그인</span>
+              </button>
+            )}
+
             {/* BYOK 키 설정 버튼 */}
             <button
               onClick={() => setIsKeyModalOpen(true)}
-              className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-amber-300 transition-all active:scale-95 shadow"
+              className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-amber-300 transition-all active:scale-95 shadow cursor-pointer"
               title="내 API 키 관리 (BYOK 보안)"
             >
               <span className="material-symbols-outlined text-[20px] block">vpn_key</span>
@@ -88,6 +133,12 @@ export default function TopAppBar({ activeTab, onTabChange, selectedStock }) {
       <ApiKeyModal
         isOpen={isKeyModalOpen}
         onClose={() => setIsKeyModalOpen(false)}
+      />
+
+      {/* 👤 로그인/회원가입 모달 */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
       />
     </>
   );
